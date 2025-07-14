@@ -1,0 +1,556 @@
+Command line invocation:
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/xcodebuild clean build -scheme DocShop -destination platform=macOS
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  SwiftSoup: https://github.com/scinfu/SwiftSoup.git @ 2.8.8
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'DocShop' in project 'DocShop'
+        ➜ Explicit dependency on target 'SwiftSoup' in project 'SwiftSoup'
+    Target 'SwiftSoup' in project 'SwiftSoup'
+        ➜ Explicit dependency on target 'SwiftSoup' in project 'SwiftSoup'
+    Target 'SwiftSoup' in project 'SwiftSoup' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 989aedcdafc98ee92ea52a9a938888b0
+Build description path: /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/XCBuildData/989aedcdafc98ee92ea52a9a938888b0.xcbuilddata
+ClangStatCache /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.0-25A5306e-5d9328ff1a6613a11d359de947506b52.sdkstatcache
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -o /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.0-25A5306e-5d9328ff1a6613a11d359de947506b52.sdkstatcache
+
+CreateBuildDirectory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-create-build-directory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products
+
+CreateBuildDirectory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-create-build-directory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-create-build-directory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+
+CreateBuildDirectory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-create-build-directory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop-eb162a02edb9a1a68be3b26861dd1996-VFS/all-product-headers.yaml
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop-eb162a02edb9a1a68be3b26861dd1996-VFS/all-product-headers.yaml
+
+CreateBuildDirectory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/PackageFrameworks
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-create-build-directory /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/PackageFrameworks
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.modulemap (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.modulemap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.DependencyMetadataFileList (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.DependencyStaticMetadataFileList (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftFileList (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup_const_extract_protocols.json (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftConstValuesFileList (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.LinkFileList (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.LinkFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-OutputFileMap.json (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop_const_extract_protocols.json (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.SwiftFileList (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.SwiftFileList
+
+Copy /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/GeneratedModuleMaps/SwiftSoup.modulemap /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.modulemap (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/SwiftSoup.modulemap /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/GeneratedModuleMaps
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.SwiftConstValuesFileList (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.LinkFileList (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.LinkFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop-OutputFileMap.json (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.DependencyStaticMetadataFileList (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.DependencyMetadataFileList (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-project-headers.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-project-headers.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-own-target-headers.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-generated-files.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-generated-files.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-all-target-headers.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-all-non-framework-target-headers.hmap (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-DebugDylibPath-normal-arm64.txt (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-DebugDylibInstallName-normal-arm64.txt (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/Entitlements.plist (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    write-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/Entitlements.plist
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/Resources (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/Resources
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/MacOS (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/MacOS
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app
+
+SwiftDriver SwiftSoup normal arm64 com.apple.xcode.tools.swift.compiler (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name SwiftSoup -Onone -enforce-exclusivity\=checked @/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos10.15 -g -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -index-store-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -Isystem /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.0-25A5306e-5d9328ff1a6613a11d359de947506b52.sdkstatcache -output-file-map /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name swiftsoup -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup_const_extract_protocols.json -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/include -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources-normal/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-Swift.h -working-directory /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ Collector.swift,\ CombiningEvaluator.swift,\ Comment.swift,\ Connection.swift,\ CssSelector.swift,\ DataNode.swift,\ DataUtil.swift,\ Document.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Collector.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CombiningEvaluator.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Comment.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Connection.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CssSelector.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DataNode.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DataUtil.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Document.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Collector.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CombiningEvaluator.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Comment.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Connection.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CssSelector.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DataNode.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DataUtil.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Document.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ SimpleDictionary.swift,\ StreamReader.swift,\ String.swift,\ StringBuilder.swift,\ StringUtil.swift,\ StructuralEvaluator.swift,\ SwiftSoup.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SimpleDictionary.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StreamReader.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/String.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StringBuilder.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StringUtil.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StructuralEvaluator.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SwiftSoup.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SimpleDictionary.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StreamReader.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/String.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StringBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StringUtil.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/StructuralEvaluator.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SwiftSoup.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ UTF8Arrays.swift,\ UnfairLock.swift,\ UnicodeScalar.swift,\ Validate.swift,\ Whitelist.swift,\ XmlDeclaration.swift,\ XmlTreeBuilder.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UTF8Arrays.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UnfairLock.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UnicodeScalar.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Validate.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Whitelist.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/XmlDeclaration.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/XmlTreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UTF8Arrays.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UnfairLock.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/UnicodeScalar.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Validate.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Whitelist.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/XmlDeclaration.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/XmlTreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ HtmlTreeBuilderState.swift,\ HttpStatusException.swift,\ Mutex.swift,\ Node.swift,\ NodeTraversor.swift,\ NodeVisitor.swift,\ OrderedSet.swift,\ ParseError.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HtmlTreeBuilderState.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HttpStatusException.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Mutex.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Node.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/NodeTraversor.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/NodeVisitor.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/OrderedSet.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseError.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HtmlTreeBuilderState.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HttpStatusException.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Mutex.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Node.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/NodeTraversor.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/NodeVisitor.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/OrderedSet.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseError.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ Tag.swift,\ TextNode.swift,\ Token.swift,\ TokenQueue.swift,\ Tokeniser.swift,\ TokeniserState.swift,\ TreeBuilder.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Tag.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TextNode.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Token.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TokenQueue.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Tokeniser.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TokeniserState.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Tag.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TextNode.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Token.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TokenQueue.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Tokeniser.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TokeniserState.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/TreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ SwiftSoup (in target 'SwiftSoup' from project 'SwiftSoup')
+
+EmitSwiftModule normal arm64 (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ ArrayExt.swift,\ Attribute.swift,\ Attributes.swift,\ BinarySearch.swift,\ BooleanAttribute.swift,\ CharacterExt.swift,\ CharacterReader.swift,\ Cleaner.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ArrayExt.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Attribute.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Attributes.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/BinarySearch.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/BooleanAttribute.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CharacterExt.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CharacterReader.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Cleaner.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ArrayExt.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Attribute.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Attributes.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/BinarySearch.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/BooleanAttribute.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CharacterExt.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/CharacterReader.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Cleaner.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ DocumentType.swift,\ Element.swift,\ Elements.swift,\ Entities.swift,\ Evaluator.swift,\ Exception.swift,\ FormElement.swift,\ HtmlTreeBuilder.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DocumentType.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Element.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Elements.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Entities.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Evaluator.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Exception.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/FormElement.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HtmlTreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/DocumentType.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Element.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Elements.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Entities.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Evaluator.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Exception.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/FormElement.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/HtmlTreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ ParseErrorList.swift,\ ParseSettings.swift,\ Parser.swift,\ ParsingStrings.swift,\ Pattern.swift,\ QueryParser.swift,\ SerializationException.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseErrorList.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseSettings.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Parser.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParsingStrings.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Pattern.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/QueryParser.swift /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SerializationException.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseErrorList.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParseSettings.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Parser.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/ParsingStrings.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/Pattern.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/QueryParser.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup/Sources/SerializationException.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling Collector.swift, CombiningEvaluator.swift, Comment.swift, Connection.swift, CssSelector.swift, DataNode.swift, DataUtil.swift, Document.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriverJobDiscovery normal arm64 Compiling UTF8Arrays.swift, UnfairLock.swift, UnicodeScalar.swift, Validate.swift, Whitelist.swift, XmlDeclaration.swift, XmlTreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ArrayExt.swift, Attribute.swift, Attributes.swift, BinarySearch.swift, BooleanAttribute.swift, CharacterExt.swift, CharacterReader.swift, Cleaner.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for SwiftSoup (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriver\ Compilation\ Requirements SwiftSoup normal arm64 com.apple.xcode.tools.swift.compiler (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name SwiftSoup -Onone -enforce-exclusivity\=checked @/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos10.15 -g -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -index-store-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -Isystem /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -F /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.0-25A5306e-5d9328ff1a6613a11d359de947506b52.sdkstatcache -output-file-map /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name swiftsoup -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup_const_extract_protocols.json -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/include -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources-normal/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-Swift.h -working-directory /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/GeneratedModuleMaps/SwiftSoup-Swift.h /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-Swift.h (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-swiftHeaderTool -arch arm64 /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup-Swift.h -o /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/GeneratedModuleMaps/SwiftSoup-Swift.h
+
+Copy /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.swiftdoc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftdoc (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftdoc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.swiftmodule /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftmodule (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftmodule /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.abi.json /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.abi.json (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.abi.json /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftsourceinfo (in target 'SwiftSoup' from project 'SwiftSoup')
+    cd /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/SourcePackages/checkouts/SwiftSoup
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftSoup.build/Debug/SwiftSoup.build/Objects-normal/arm64/SwiftSoup.swiftsourceinfo /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/SwiftSoup.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+ProcessProductPackaging "" /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    
+    Entitlements:
+    
+    {
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.get-task-allow" = 1;
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent
+
+ProcessProductPackagingDER /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent.der (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /usr/bin/derq query -f xml -i /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent -o /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop.app.xcent.der --raw
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_output/unthinned (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_output/unthinned
+
+MkDir /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_output/thinned (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /bin/mkdir -p /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/App/Assets.xcassets (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/App/Assets.xcassets --compile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/Resources --output-format human-readable-text --notices --warnings --lightweight-asset-runtime-mode enabled --export-dependency-info /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_dependencies --output-partial-info-plist /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_generated_info.plist --app-icon AppIcon --include-all-app-icons --accent-color AccentColor --enable-on-demand-resources NO --development-region en --target-device mac --minimum-deployment-target 26.0 --platform macosx --bundle-identifier -.DocShop --generate-swift-asset-symbols /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/DocShop.app/Contents/Resources /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/App/Assets.xcassets (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    /Applications/Xcode-beta.app/Contents/Developer/usr/bin/actool /Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/App/Assets.xcassets --compile /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --lightweight-asset-runtime-mode enabled --export-dependency-info /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --include-all-app-icons --accent-color AccentColor --enable-on-demand-resources NO --development-region en --target-device mac --minimum-deployment-target 26.0 --platform macosx
+
+SwiftDriver DocShop normal arm64 com.apple.xcode.tools.swift.compiler (in target 'DocShop' from project 'DocShop')
+    cd /Volumes/Ready500/DEVELOPMENT/DocShop
+    builtin-SwiftDriver -- /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DocShop -Onone -enforce-exclusivity\=checked @/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature MemberImportVisibility -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -F /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/PackageFrameworks -F /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug -emit-localized-strings -emit-localized-strings-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64 -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.0-25A5306e-5d9328ff1a6613a11d359de947506b52.sdkstatcache -output-file-map /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop_const_extract_protocols.json -Xcc -iquote -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-generated-files.hmap -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-own-target-headers.hmap -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop-eb162a02edb9a1a68be3b26861dd1996-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DocShop-project-headers.hmap -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Products/Debug/include -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources-normal/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources/arm64 -Xcc -I/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-fkxjuysxtqcquncbbcggorjpiior/Build/Intermediates.noindex/DocShop.build/Debug/DocShop.build/Objects-normal/arm64/DocShop-Swift.h -working-directory /Volumes/Ready500/DEVELOPMENT/DocShop -experimental-emit-module-separately -disable-cmo
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Core/DocumentIngestionManager.swift:4:8: warning: File 'DocumentIngestionManager.swift' is part of module 'DocShop'; ignoring import
+import DocShop // or import the correct module if needed
+       ^ (in target 'DocShop' from project 'DocShop')
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Views/LibraryView.swift:376:17: error: Expected ')' in expression list
+                var updatedDoc = document
+                ^ (in target 'DocShop' from project 'DocShop')
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Views/LibraryView.swift:375:19: note: To match this opening '('
+            Button(acti != nil
+                  ^ (in target 'DocShop' from project 'DocShop')
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Views/LibraryView.swift:379:14: error: Consecutive statements on a line must be separated by ';'
+            }) {
+             ^
+             ; (in target 'DocShop' from project 'DocShop')
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Views/LibraryView.swift:379:14: error: Expected expression
+            }) {
+             ^ (in target 'DocShop' from project 'DocShop')
+/Volumes/Ready500/DEVELOPMENT/DocShop/DocShop/Views/LibraryView.swift:423:1: error: Extraneous '}' at top level
+}
+^ (in target 'DocShop' from project 'DocShop')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SimpleDictionary.swift, StreamReader.swift, String.swift, StringBuilder.swift, StringUtil.swift, StructuralEvaluator.swift, SwiftSoup.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Tag.swift, TextNode.swift, Token.swift, TokenQueue.swift, Tokeniser.swift, TokeniserState.swift, TreeBuilder.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ParseErrorList.swift, ParseSettings.swift, Parser.swift, ParsingStrings.swift, Pattern.swift, QueryParser.swift, SerializationException.swift (in target 'SwiftSoup' from project 'SwiftSoup')
+

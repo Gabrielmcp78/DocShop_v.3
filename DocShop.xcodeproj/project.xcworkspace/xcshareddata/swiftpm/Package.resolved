@@ -1,0 +1,24 @@
+{
+  "originHash" : "72d5d98d9801ce765e2b1a9ff7887bf10c601809b8d0db9b31e6cc0b2f476c23",
+  "pins" : [
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup.git",
+      "state" : {
+        "revision" : "aa85ee96017a730031bafe411cde24a08a17a9c9",
+        "version" : "2.8.8"
+      }
+    },
+    {
+      "identity" : "visualeffects",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/twostraws/VisualEffects",
+      "state" : {
+        "revision" : "8ff7f90f9650d9db5774275d0b1f07ef642ecf4d",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 3
+}
