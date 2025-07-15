@@ -83,7 +83,7 @@ struct DocumentTableOfContentsView: View {
             
             if let selectedDocument = selectedDocument {
                 Divider()
-                DocumentDetailView(document: selectedDocument)
+                ImprovedDocumentDetailView(document: selectedDocument)
                     .frame(minWidth: 600, idealWidth: 800, maxWidth: .infinity)
                     .transition(.move(edge: .trailing).combined(with: .opacity))
             }
