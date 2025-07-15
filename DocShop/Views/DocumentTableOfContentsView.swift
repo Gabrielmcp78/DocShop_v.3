@@ -250,13 +250,13 @@ struct DocumentTableOfContentsView: View {
                     HStack {
                         Text(document.formattedDate)
                             .font(.caption2)
-                            .foregroundStyle(.tertiary)
+                            .foregroundColor(.tertiary)
                         
                         if document.accessCount > 0 {
                             Spacer()
                             Text("↗ \(document.accessCount)")
                                 .font(.caption2)
-                                .foregroundStyle(.tertiary)
+                                .foregroundColor(.tertiary)
                         }
                     }
                 }

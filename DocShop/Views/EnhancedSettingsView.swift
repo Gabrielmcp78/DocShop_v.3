@@ -159,10 +159,26 @@ struct EnhancedSettingsView: View {
                 
                 Spacer()
                 
-                Button("Refresh") {
-                    library.refreshLibrary()
+                VStack(spacing: 8) {
+                    Button("Refresh") {
+                        library.refreshLibrary()
+                    }
+                    .buttonStyle(LiquidGlassButtonStyle())
+                    
+                    NavigationLink(destination: BulkDeleteView()) {
+                        HStack {
+                            Image(systemName: "trash.fill")
+                                .foregroundColor(.red)
+                            Text("Bulk Delete")
+                                .fontWeight(.medium)
+                        }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(.red.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(LiquidGlassButtonStyle())
             }
         }
         .padding(14)

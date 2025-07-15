@@ -1,4 +1,5 @@
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct ImprovedDocumentDetailView: View {
     let document: DocumentMetaData
@@ -7,6 +8,7 @@ struct ImprovedDocumentDetailView: View {
     @State private var error: String?
     @State private var searchText = ""
     @State private var showOutline = false
+    @State private var scrollProxy: ScrollViewReader?
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -182,12 +184,17 @@ struct ImprovedDocumentDetailView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
             } else {
-                ScrollView {
-                    ImprovedMarkdownRenderer(
-                        content: content,
-                        searchText: searchText
-                    )
-                    .padding()
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        ImprovedMarkdownRenderer(
+                            content: content,
+                            searchText: searchText
+                        )
+                        .padding()
+                    }
+                    .onAppear {
+                        scrollProxy = proxy
+                    }
                 }
             }
         }
@@ -214,7 +221,11 @@ struct ImprovedDocumentDetailView: View {
                 LazyVStack(alignment: .leading, spacing: 4) {
                     ForEach(extractHeadings(from: content), id: \.id) { heading in
                         Button(action: {
-                            // TODO: Scroll to heading
+                            if let proxy = scrollProxy {
+                                withAnimation(.easeInOut(duration: 0.5)) {
+                                    proxy.scrollTo("heading-\(heading.id)", anchor: .top)
+                                }
+                            }
                         }) {
                             HStack {
                                 Text(heading.title)
@@ -429,6 +440,7 @@ struct ImprovedMarkdownRenderer: View {
                 .fontWeight(.bold)
                 .padding(.top, 8)
                 .padding(.bottom, 4)
+                .id("heading-\(element.id)")
                 
         case .heading2:
             Text(element.content)
@@ -436,6 +448,7 @@ struct ImprovedMarkdownRenderer: View {
                 .fontWeight(.semibold)
                 .padding(.top, 6)
                 .padding(.bottom, 2)
+                .id("heading-\(element.id)")
                 
         case .heading3:
             Text(element.content)
@@ -443,6 +456,7 @@ struct ImprovedMarkdownRenderer: View {
                 .fontWeight(.medium)
                 .padding(.top, 4)
                 .padding(.bottom, 2)
+                .id("heading-\(element.id)")
                 
         case .paragraph:
             Text(processInlineMarkdown(element.content))
