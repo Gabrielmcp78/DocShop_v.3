@@ -4,6 +4,8 @@ struct BulkDeleteView: View {
     @ObservedObject private var library = DocLibraryIndex.shared
     @State private var selectedCriteria: DeleteCriteria = .company
     @State private var selectedItems: Set<String> = []
+    @State private var selectedDocuments: Set<UUID> = []
+    @State private var showIndividualSelection = false
     @State private var showConfirmation = false
     @State private var isDeleting = false
     @Environment(\.presentationMode) var presentationMode
@@ -45,7 +47,7 @@ struct BulkDeleteView: View {
         }
     }
     
-    var documentsToDelete: [DocumentMetaData] {
+    var filteredDocuments: [DocumentMetaData] {
         return library.documents.filter { document in
             selectedItems.contains { selectedItem in
                 switch selectedCriteria {
@@ -66,6 +68,14 @@ struct BulkDeleteView: View {
         }
     }
     
+    var documentsToDelete: [DocumentMetaData] {
+        if showIndividualSelection {
+            return library.documents.filter { selectedDocuments.contains($0.id) }
+        } else {
+            return filteredDocuments
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             headerSection
@@ -73,6 +83,10 @@ struct BulkDeleteView: View {
             criteriaSelectionSection
             
             itemSelectionSection
+            
+            if !filteredDocuments.isEmpty && !selectedItems.isEmpty {
+                individualDocumentSelectionSection
+            }
             
             previewSection
             
@@ -155,12 +169,21 @@ struct BulkDeleteView: View {
                 
                 Spacer()
                 
-                if !selectedItems.isEmpty {
-                    Button("Clear All") {
-                        selectedItems.removeAll()
+                HStack(spacing: 12) {
+                    Button("Check All") {
+                        selectedItems = Set(availableOptions)
                     }
                     .font(.caption)
                     .foregroundColor(.blue)
+                    .disabled(availableOptions.isEmpty)
+                    
+                    if !selectedItems.isEmpty {
+                        Button("Clear All") {
+                            selectedItems.removeAll()
+                        }
+                        .font(.caption)
+                        .foregroundColor(.blue)
+                    }
                 }
             }
             
@@ -408,6 +431,119 @@ struct BulkDeleteView: View {
         return "Larger than 1 MB"
     }
     
+    private var individualDocumentSelectionSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("Individual Documents")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                
+                Text("(\(filteredDocuments.count) found)")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
+                HStack(spacing: 12) {
+                    Button("Select All") {
+                        selectedDocuments = Set(filteredDocuments.map { $0.id })
+                        showIndividualSelection = true
+                    }
+                    .font(.caption)
+                    .foregroundColor(.blue)
+                    
+                    if !selectedDocuments.isEmpty {
+                        Button("Clear Selection") {
+                            selectedDocuments.removeAll()
+                            showIndividualSelection = false
+                        }
+                        .font(.caption)
+                        .foregroundColor(.blue)
+                    }
+                    
+                    Button(showIndividualSelection ? "Hide Individual" : "Show Individual") {
+                        showIndividualSelection.toggle()
+                        if !showIndividualSelection {
+                            selectedDocuments.removeAll()
+                        }
+                    }
+                    .font(.caption)
+                    .foregroundColor(.purple)
+                }
+            }
+            
+            if showIndividualSelection {
+                ScrollView {
+                    LazyVStack(alignment: .leading, spacing: 4) {
+                        ForEach(filteredDocuments, id: \.id) { document in
+                            Button(action: {
+                                if selectedDocuments.contains(document.id) {
+                                    selectedDocuments.remove(document.id)
+                                } else {
+                                    selectedDocuments.insert(document.id)
+                                }
+                            }) {
+                                HStack(alignment: .top, spacing: 8) {
+                                    Image(systemName: selectedDocuments.contains(document.id) ? "checkmark.square.fill" : "square")
+                                        .foregroundColor(selectedDocuments.contains(document.id) ? .blue : .secondary)
+                                        .font(.subheadline)
+                                    
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(document.displayTitle)
+                                            .font(.subheadline)
+                                            .fontWeight(.medium)
+                                            .lineLimit(2)
+                                            .multilineTextAlignment(.leading)
+                                        
+                                        HStack {
+                                            Text(extractCompany(from: document.sourceURL))
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                            
+                                            Text("•")
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                            
+                                            Text(document.contentType.displayName)
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                            
+                                            Text("•")
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                            
+                                            Text(document.formattedFileSize)
+                                                .font(.caption2)
+                                                .foregroundColor(.secondary)
+                                        }
+                                        
+                                        Text(document.formattedDate)
+                                            .font(.caption2)
+                                            .foregroundColor(.tertiary)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 6)
+                                .background(selectedDocuments.contains(document.id) ? .blue.opacity(0.1) : .clear)
+                                .clipShape(RoundedRectangle(cornerRadius: 6))
+                                .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                }
+                .frame(maxHeight: 300)
+                .background(.gray.opacity(0.05))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
+        }
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
+    
     private func performBulkDelete() {
         isDeleting = true
         
@@ -426,7 +562,10 @@ struct BulkDeleteView: View {
             
             await MainActor.run {
                 isDeleting = false
-                presentationMode.wrappedValue.dismiss()
+                selectedItems.removeAll() // Clear selections but stay in the view
+                selectedDocuments.removeAll() // Clear individual selections too
+                showIndividualSelection = false // Hide individual selection
+                // Don't dismiss - stay in bulk delete view for more operations
             }
         }
     }

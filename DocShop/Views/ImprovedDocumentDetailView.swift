@@ -8,7 +8,7 @@ struct ImprovedDocumentDetailView: View {
     @State private var error: String?
     @State private var searchText = ""
     @State private var showOutline = false
-    @State private var scrollProxy: ScrollViewReader?
+    @State private var scrollProxy: ScrollViewProxy?
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -33,7 +33,7 @@ struct ImprovedDocumentDetailView: View {
         .onAppear {
             loadContent()
         }
-        .onChange(of: document.id) { _ in
+        .onChange(of: document.id) { old, new in
             loadContent()
         }
     }
