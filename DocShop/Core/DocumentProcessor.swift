@@ -255,11 +255,14 @@ class DocumentProcessor: ObservableObject {
             self.processingProgress = 0.6
         }
         
-        let markdown = try await convertToMarkdown(
-            html: content,
-            title: title,
+        // Use smart document processor for better structure
+        let processedDoc = try await SmartDocumentProcessor.shared.processDocumentationPage(
+            html: String(data: finalData, encoding: .utf8) ?? "",
             sourceURL: url
         )
+        
+        let markdown = processedDoc.markdown
+        let title = processedDoc.title
         
         await MainActor.run {
             self.currentStatus = "Saving document..."
@@ -426,6 +429,39 @@ class DocumentProcessor: ObservableObject {
     }
     
     private func cleanupContent(_ content: Element) throws {
+        // Remove scripts and styles first
+        try content.select("script, style, noscript").remove()
+        
+        // Remove elements with loading or placeholder classes
+        try content.select("[class*='loading'], [class*='placeholder']").remove()
+        
+        // Remove excessive code blocks that are just command dumps
+        let codeBlocks = try content.select("pre, code")
+        for codeBlock in codeBlocks {
+            let codeText = try codeBlock.text()
+            // Remove if it's a long command dump without explanation
+            if codeText.count > 500 && (
+                codeText.contains("curl") && codeText.contains("wget") ||
+                codeText.contains("echo") && codeText.contains(">>") ||
+                codeText.contains("rm -rf") && codeText.contains("$HOME")
+            ) {
+                try codeBlock.remove()
+            }
+        }
+        
+        // Preserve internal links but convert them to readable format
+        let links = try content.select("a[href]")
+        for link in links {
+            let href = try link.attr("href")
+            let linkText = try link.text()
+            
+            // If it's an internal link (starts with # or relative path)
+            if href.hasPrefix("#") || (!href.hasPrefix("http") && !href.isEmpty) {
+                // Convert to a more readable format
+                try link.html("[\(linkText)](\(href)) → Internal Link")
+            }
+        }
+        
         // Remove empty elements and elements with only whitespace
         try content.select(":empty").forEach { element in
             let html = try element.html()
@@ -433,12 +469,6 @@ class DocumentProcessor: ObservableObject {
                 try element.remove()
             }
         }
-        
-        // Remove scripts and styles
-        try content.select("script, style, noscript").remove()
-        
-        // Remove elements with loading or placeholder classes
-        try content.select("[class*='loading'], [class*='placeholder']").remove()
         
         // Remove comments
         let nodes = content.getChildNodes()

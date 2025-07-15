@@ -519,7 +519,7 @@ struct BulkDeleteView: View {
                                         
                                         Text(document.formattedDate)
                                             .font(.caption2)
-                                            .foregroundColor(.tertiary)
+                                            .foregroundStyle(.tertiary)
                                     }
                                     
                                     Spacer()

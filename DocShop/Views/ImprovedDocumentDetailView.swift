@@ -33,7 +33,7 @@ struct ImprovedDocumentDetailView: View {
         .onAppear {
             loadContent()
         }
-        .onChange(of: document.id) { old, new in
+        .onChange(of: document.id) {
             loadContent()
         }
     }

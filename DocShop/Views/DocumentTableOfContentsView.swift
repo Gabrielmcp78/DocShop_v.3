@@ -78,7 +78,7 @@ struct DocumentTableOfContentsView: View {
                 Divider()
                 tableOfContentsSection
             }
-            .frame(width: selectedDocument == nil ? .infinity : 350)
+            .modifier(SidebarFrame(selectedDocument: selectedDocument))
             .background(.ultraThinMaterial)
             
             if let selectedDocument = selectedDocument {
@@ -161,7 +161,7 @@ struct DocumentTableOfContentsView: View {
         let isExpanded = expandedSections.contains(sectionKey)
         
         return VStack(alignment: .leading, spacing: 0) {
-            // Section Header
+            // Section Header (Company/Language/etc.)
             Button(action: {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     if isExpanded {
@@ -202,11 +202,11 @@ struct DocumentTableOfContentsView: View {
             }
             .buttonStyle(.plain)
             
-            // Section Content
+            // Section Content - Documents under this category
             if isExpanded {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(documents, id: \.id) { document in
-                        documentRow(document)
+                        documentRowWithHeaders(document, in: sectionKey)
                     }
                 }
                 .transition(.opacity.combined(with: .move(edge: .top)))
@@ -215,6 +215,196 @@ struct DocumentTableOfContentsView: View {
             Divider()
                 .padding(.leading)
         }
+    }
+    
+    private func documentRowWithHeaders(_ document: DocumentMetaData, in sectionKey: String) -> some View {
+        let isDocumentExpanded = expandedSections.contains("\(sectionKey)-\(document.id)")
+        
+        return VStack(alignment: .leading, spacing: 0) {
+            // Document row
+            Button(action: {
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    selectedDocument = document
+                    var updatedDoc = document
+                    updatedDoc.recordAccess()
+                    library.updateDocument(updatedDoc)
+                }
+            }) {
+                HStack(alignment: .top, spacing: 8) {
+                    // Document type icon
+                    Image(systemName: iconForDocument(document))
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .frame(width: 16)
+                    
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(document.displayTitle)
+                            .font(.subheadline)
+                            .foregroundColor(.primary)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                        
+                        if let summary = document.summary, !summary.isEmpty {
+                            Text(summary)
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                                .lineLimit(1)
+                        }
+                        
+                        HStack {
+                            Text(document.formattedDate)
+                                .font(.caption2)
+                                .foregroundColor(.clear)
+                            
+                            if document.accessCount > 0 {
+                                Spacer()
+                                Text("↗ \(document.accessCount)")
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 4) {
+                        if document.isFavorite {
+                            Image(systemName: "heart.fill")
+                                .font(.caption2)
+                                .foregroundColor(.red)
+                        }
+                        
+                        // Toggle headers button
+                        Button(action: {
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                let headerKey = "\(sectionKey)-\(document.id)"
+                                if isDocumentExpanded {
+                                    expandedSections.remove(headerKey)
+                                } else {
+                                    expandedSections.insert(headerKey)
+                                }
+                            }
+                        }) {
+                            Image(systemName: isDocumentExpanded ? "chevron.down" : "chevron.right")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.leading, 24) // Indent under section
+                .padding(.vertical, 6)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .background(selectedDocument?.id == document.id ? Color.accentColor.opacity(0.1) : Color.clear)
+            
+            // Document headers (when expanded)
+            if isDocumentExpanded {
+                documentHeadersSection(for: document)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+            }
+        }
+    }
+    
+    private func documentHeadersSection(for document: DocumentMetaData) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            // Load and show document headers
+            if let headers = loadDocumentHeaders(for: document) {
+                ForEach(headers, id: \.id) { header in
+                    Button(action: {
+                        // Select the document and scroll to header
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            selectedDocument = document
+                            var updatedDoc = document
+                            updatedDoc.recordAccess()
+                            library.updateDocument(updatedDoc)
+                        }
+                        
+                        // TODO: Scroll to specific header in document view
+                        // This would require communication with the document detail view
+                    }) {
+                        HStack {
+                            Image(systemName: "number")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                                .frame(width: 12)
+                            
+                            Text(header.title)
+                                .font(.caption)
+                                .foregroundColor(.primary)
+                                .lineLimit(1)
+                            
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        .padding(.leading, 48) // Double indent for headers
+                        .padding(.vertical, 2)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .background(Color.clear)
+                }
+            } else {
+                HStack {
+                    Image(systemName: "doc.text")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                        .frame(width: 12)
+                    
+                    Text("Loading headers...")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                .padding(.leading, 48)
+                .padding(.vertical, 2)
+            }
+        }
+    }
+    
+    private func loadDocumentHeaders(for document: DocumentMetaData) -> [DocumentHeader]? {
+        // Load document content and extract headers
+        do {
+            let content = try String(contentsOfFile: document.filePath, encoding: .utf8)
+            return extractHeaders(from: content)
+        } catch {
+            return nil
+        }
+    }
+    
+    private func extractHeaders(from content: String) -> [DocumentHeader] {
+        let lines = content.components(separatedBy: .newlines)
+        var headers: [DocumentHeader] = []
+        
+        for (index, line) in lines.enumerated() {
+            let trimmed = line.trimmingCharacters(in: .whitespaces)
+            
+            if trimmed.hasPrefix("### ") {
+                headers.append(DocumentHeader(
+                    id: index,
+                    level: 3,
+                    title: String(trimmed.dropFirst(4))
+                ))
+            } else if trimmed.hasPrefix("## ") {
+                headers.append(DocumentHeader(
+                    id: index,
+                    level: 2,
+                    title: String(trimmed.dropFirst(3))
+                ))
+            } else if trimmed.hasPrefix("# ") {
+                headers.append(DocumentHeader(
+                    id: index,
+                    level: 1,
+                    title: String(trimmed.dropFirst(2))
+                ))
+            }
+        }
+        
+        return headers.prefix(10).map { $0 } // Limit to first 10 headers to avoid clutter
     }
     
     private func documentRow(_ document: DocumentMetaData) -> some View {
@@ -341,6 +531,24 @@ struct DocumentTableOfContentsView: View {
         case .html: return "globe"
         case .pdf: return "doc.richtext"
         default: return "doc"
+        }
+    }
+}
+
+private struct DocumentHeader: Identifiable {
+    let id: Int        // Line number or unique index
+    let level: Int     // Markdown header level (1 for #, 2 for ##, 3 for ###)
+    let title: String
+}
+
+private struct SidebarFrame: ViewModifier {
+    let selectedDocument: DocumentMetaData?
+
+    func body(content: Content) -> some View {
+        if selectedDocument == nil {
+            content.frame(maxWidth: .infinity)
+        } else {
+            content.frame(width: 350)
         }
     }
 }
