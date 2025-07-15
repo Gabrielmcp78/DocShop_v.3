@@ -461,6 +461,7 @@ struct ImprovedMarkdownRenderer: View {
         case .paragraph:
             Text(processInlineMarkdown(element.content))
                 .font(.body)
+                .textSelection(.enabled)
                 .fixedSize(horizontal: false, vertical: true)
                 
         case .codeBlock:
@@ -501,6 +502,7 @@ struct ImprovedMarkdownRenderer: View {
                     .foregroundColor(.secondary)
                 Text(processInlineMarkdown(element.content))
                     .font(.body)
+                    .textSelection(.enabled)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
             }

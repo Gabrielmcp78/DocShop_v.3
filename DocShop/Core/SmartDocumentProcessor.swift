@@ -57,19 +57,46 @@ class SmartDocumentProcessor {
     }
     
     private func cleanDocumentationContent(_ element: Element) throws {
-        // Remove navigation, headers, footers
-        let unwantedSelectors = [
-            "nav", ".nav", ".navigation", ".navbar",
+        // REMOVE THE USELESS MENU LINKS THAT ARE JUST STATIC TEXT
+        let menuSelectors = [
+            "nav", ".nav", ".navigation", ".navbar", ".menu",
             "header", ".header", "footer", ".footer",
-            ".sidebar", ".aside", ".toc-sidebar",
+            ".sidebar", ".aside", ".toc-sidebar", ".table-of-contents",
             ".breadcrumb", ".breadcrumbs",
             ".advertisement", ".ads", ".banner",
             ".search-box", ".search-form",
-            "script", "style", "noscript"
+            "script", "style", "noscript",
+            // REMOVE THESE SPECIFIC MENU STRUCTURES THAT CREATE USELESS TEXT
+            ".site-nav", ".doc-nav", ".page-nav",
+            "[role='navigation']", "[role='banner']", "[role='complementary']"
         ]
         
-        for selector in unwantedSelectors {
+        for selector in menuSelectors {
             try element.select(selector).remove()
+        }
+        
+        // REMOVE LINK LISTS THAT ARE JUST MENU ITEMS (NOT ACTUAL CONTENT)
+        let linkLists = try element.select("ul, ol")
+        for list in linkLists {
+            let links = try list.select("a")
+            let totalItems = try list.select("li").count
+            
+            // If more than 80% of list items are just links (menu structure), remove it
+            if links.count > 3 && Double(links.count) / Double(totalItems) > 0.8 {
+                // Check if these are navigation links (short text, no description)
+                var isNavigationList = true
+                for link in links {
+                    let linkText = try link.text()
+                    if linkText.count > 50 { // If link text is long, it's probably content
+                        isNavigationList = false
+                        break
+                    }
+                }
+                
+                if isNavigationList {
+                    try list.remove() // REMOVE THE USELESS MENU LIST
+                }
+            }
         }
         
         // Remove excessive code blocks (installation scripts, etc.)
@@ -83,18 +110,23 @@ class SmartDocumentProcessor {
             }
         }
         
-        // Clean up links - preserve internal navigation but mark external
+        // CONVERT REMAINING LINKS TO ACTUAL FUNCTIONAL LINKS
         let links = try element.select("a[href]")
         for link in links {
             let href = try link.attr("href")
             let linkText = try link.text()
             
             if href.hasPrefix("#") {
-                // Internal navigation link - preserve but mark
+                // Internal navigation link - make it functional
+                try link.html("🔗 \(linkText)")
                 try link.attr("data-internal", "true")
             } else if !href.hasPrefix("http") && !href.isEmpty {
-                // Relative link - could be internal navigation
+                // Relative link - mark for potential crawling
+                try link.html("📄 \(linkText) → \(href)")
                 try link.attr("data-relative", "true")
+            } else if href.hasPrefix("http") {
+                // External link - mark clearly
+                try link.html("🌐 \(linkText)")
             }
         }
     }
@@ -170,7 +202,7 @@ class SmartDocumentProcessor {
             sectionContent = ""
             
             // Extract content for this section
-            var nextElement = heading.nextElementSibling()
+            var nextElement = try heading.nextElementSibling()
             while let element = nextElement {
                 let tagName = element.tagName().lowercased()
                 
@@ -188,7 +220,7 @@ class SmartDocumentProcessor {
                     sectionContent += elementText + "\n\n"
                 }
                 
-                nextElement = element.nextElementSibling()
+                nextElement = try element.nextElementSibling()
             }
         }
         

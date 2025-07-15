@@ -262,7 +262,7 @@ class DocumentProcessor: ObservableObject {
         )
         
         let markdown = processedDoc.markdown
-        let title = processedDoc.title
+        let finalTitle = processedDoc.title
         
         await MainActor.run {
             self.currentStatus = "Saving document..."
@@ -270,7 +270,7 @@ class DocumentProcessor: ObservableObject {
         }
         
         var document = try await saveDocument(
-            title: title,
+            title: finalTitle,
             content: markdown,
             sourceURL: url,
             response: response,
@@ -786,6 +786,45 @@ class DocumentProcessor: ObservableObject {
         metadata.wasRenderedWithJS = jsRenderingUsed
         metadata.contentHash = duplicateHandler.generateContentHash(content)
         metadata.lastUpdateCheck = Date()
+        
+        // Auto-tag based on source URL - BASIC LOGIC THAT WAS MISSING
+        var autoTags: Set<String> = []
+        let urlLower = sourceURL.absoluteString.lowercased()
+        
+        if urlLower.contains("apple.com") || urlLower.contains("developer.apple") {
+            autoTags.insert("Swift")
+            autoTags.insert("Apple")
+            autoTags.insert("iOS")
+        }
+        if urlLower.contains("google.com") || urlLower.contains("android") {
+            autoTags.insert("Android")
+            autoTags.insert("Google")
+        }
+        if urlLower.contains("microsoft.com") {
+            autoTags.insert("Microsoft")
+        }
+        if urlLower.contains("github.com") {
+            autoTags.insert("GitHub")
+        }
+        
+        // Add language tags based on content
+        let contentLower = content.lowercased()
+        if contentLower.contains("swift") || contentLower.contains("xcode") || urlLower.contains("swift") {
+            autoTags.insert("Swift")
+        }
+        if contentLower.contains("python") || urlLower.contains("python") {
+            autoTags.insert("Python")
+        }
+        if contentLower.contains("javascript") || contentLower.contains("js") || urlLower.contains("javascript") {
+            autoTags.insert("JavaScript")
+        }
+        
+        // Merge with existing tags
+        if metadata.tags == nil {
+            metadata.tags = autoTags
+        } else {
+            metadata.tags!.formUnion(autoTags)
+        }
         
         // If updating existing document, remove the old one
         if let existing = existingDoc {
