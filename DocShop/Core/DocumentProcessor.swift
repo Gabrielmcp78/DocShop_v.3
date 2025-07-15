@@ -255,14 +255,13 @@ class DocumentProcessor: ObservableObject {
             self.processingProgress = 0.6
         }
         
-        // Use smart document processor for better structure
-        let processedDoc = try await SmartDocumentProcessor.shared.processDocumentationPage(
-            html: String(data: finalData, encoding: .utf8) ?? "",
+        // Go back to simple, working markdown conversion - the "smart" processor was garbage
+        let markdown = try await convertToMarkdown(
+            html: content,
+            title: title,
             sourceURL: url
         )
-        
-        let markdown = processedDoc.markdown
-        let finalTitle = processedDoc.title
+        let finalTitle = title
         
         await MainActor.run {
             self.currentStatus = "Saving document..."

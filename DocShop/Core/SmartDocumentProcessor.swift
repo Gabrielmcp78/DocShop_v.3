@@ -28,31 +28,48 @@ class SmartDocumentProcessor {
     }
     
     private func extractDocumentationContent(from doc: Document) throws -> Element {
-        // Try documentation-specific selectors first
-        let docSelectors = [
-            "main[role='main']",
+        // COMPLETELY REMOVE ALL NAVIGATION AND MENU ELEMENTS FIRST
+        try doc.select("nav, .nav, .navigation, .navbar, .menu, .sidebar, .toc, .table-of-contents").remove()
+        try doc.select("header, .header, footer, .footer").remove()
+        try doc.select(".breadcrumb, .breadcrumbs").remove()
+        
+        // Try to find the ACTUAL CONTENT, not navigation
+        let contentSelectors = [
+            ".content-body",
+            ".article-content", 
             ".documentation-content",
-            ".doc-content",
-            ".content-wrapper",
-            "article",
-            "main",
-            "#content",
-            ".main-content"
+            ".doc-body",
+            ".main-content",
+            "article .content",
+            "main .content",
+            ".post-content",
+            ".entry-content"
         ]
         
-        for selector in docSelectors {
+        for selector in contentSelectors {
             if let element = try doc.select(selector).first() {
-                try cleanDocumentationContent(element)
+                try aggressivelyCleanContent(element)
                 return element
             }
         }
         
-        // Fallback to body but clean it heavily
+        // If no specific content area found, try to extract from main/article
+        if let main = try doc.select("main").first() {
+            try aggressivelyCleanContent(main)
+            return main
+        }
+        
+        if let article = try doc.select("article").first() {
+            try aggressivelyCleanContent(article)
+            return article
+        }
+        
+        // Last resort - use body but remove ALL navigation
         guard let body = doc.body() else {
             throw DocumentError.contentExtractionFailed("No content found")
         }
         
-        try cleanDocumentationContent(body)
+        try aggressivelyCleanContent(body)
         return body
     }
     
@@ -264,6 +281,80 @@ class SmartDocumentProcessor {
         return text.lowercased()
             .replacingOccurrences(of: " ", with: "-")
             .replacingOccurrences(of: "[^a-z0-9-]", with: "", options: .regularExpression)
+    }
+    
+    private func aggressivelyCleanContent(_ element: Element) throws {
+        // REMOVE ALL NAVIGATION AND MENU GARBAGE
+        let garbageSelectors = [
+            "nav", ".nav", ".navigation", ".navbar", ".menu", ".site-nav",
+            "header", ".header", "footer", ".footer", 
+            ".sidebar", ".aside", ".toc", ".table-of-contents", ".doc-nav",
+            ".breadcrumb", ".breadcrumbs", ".page-nav",
+            ".search", ".search-box", ".search-form",
+            ".advertisement", ".ads", ".banner", ".promo",
+            "script", "style", "noscript",
+            "[role='navigation']", "[role='banner']", "[role='complementary']",
+            "[role='search']", "[role='form']"
+        ]
+        
+        for selector in garbageSelectors {
+            try element.select(selector).remove()
+        }
+        
+        // REMOVE LISTS THAT ARE JUST NAVIGATION MENUS
+        let lists = try element.select("ul, ol")
+        for list in lists {
+            let listItems = try list.select("li")
+            let links = try list.select("a")
+            
+            // If it's mostly links with short text, it's probably a menu
+            if links.count > 2 && Double(links.count) / Double(listItems.count) > 0.7 {
+                var totalLinkTextLength = 0
+                for link in links {
+                    totalLinkTextLength += try link.text().count
+                }
+                
+                let averageLinkLength = totalLinkTextLength / links.count
+                
+                // If average link text is short (< 30 chars), it's probably navigation
+                if averageLinkLength < 30 {
+                    try list.remove()
+                }
+            }
+        }
+        
+        // REMOVE ELEMENTS THAT ARE JUST REPETITIVE NAVIGATION
+        let allElements = try element.select("*")
+        for elem in allElements {
+            let text = try elem.ownText()
+            let className = try elem.className()
+            
+            // Remove elements with navigation-related class names
+            if className.lowercased().contains("nav") || 
+               className.lowercased().contains("menu") ||
+               className.lowercased().contains("sidebar") ||
+               className.lowercased().contains("toc") {
+                try elem.remove()
+            }
+            
+            // Remove elements that are just single words (likely navigation)
+            if text.count > 0 && text.count < 20 && !text.contains(" ") {
+                let parent = elem.parent()
+                if parent != nil && try parent!.children().count > 5 {
+                    // If parent has many similar short elements, remove this one
+                    try elem.remove()
+                }
+            }
+        }
+        
+        // KEEP ONLY PARAGRAPHS, HEADINGS, AND MEANINGFUL CONTENT
+        let contentElements = try element.select("p, h1, h2, h3, h4, h5, h6, blockquote, pre, code")
+        let allText = contentElements.map { try? $0.text() }.compactMap { $0 }.joined(separator: " ")
+        
+        // If we don't have enough meaningful content, this might be a navigation page
+        if allText.count < 200 {
+            throw DocumentError.contentExtractionFailed("Page appears to be mostly navigation, not content")
+        }
     }
     
     private func createStructuredMarkdown(from structure: DocumentStructure) throws -> String {
