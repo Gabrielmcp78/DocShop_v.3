@@ -49,7 +49,6 @@ struct DocumentDropView: View {
                 .buttonStyle(.bordered)
                 .fileImporter(isPresented: $isImporting, allowedContentTypes: [
                     .plainText,
-                    .markdown,
                     .html,
                     .pdf,
                     UTType(filenameExtension: "md")!,
