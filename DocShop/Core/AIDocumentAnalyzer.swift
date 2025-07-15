@@ -200,9 +200,10 @@ class AIDocumentAnalyzer: ObservableObject {
             var enhancedDoc = document
             let result = enhancement.content
             
-            if !result.enhancedTitle.isEmpty && result.enhancedTitle != document.title {
-                enhancedDoc.title = result.enhancedTitle
-            }
+            // Preserve original title - do not override with AI-generated titles
+            // if !result.enhancedTitle.isEmpty && result.enhancedTitle != document.title {
+            //     enhancedDoc.title = result.enhancedTitle
+            // }
             
             if !result.enhancedSummary.isEmpty {
                 enhancedDoc.summary = result.enhancedSummary

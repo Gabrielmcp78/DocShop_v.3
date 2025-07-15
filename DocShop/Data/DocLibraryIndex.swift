@@ -180,15 +180,68 @@ class DocLibraryIndex: ObservableObject {
             }
             return
         }
-        
-        let lowercaseQuery = query.lowercased()
-        let filtered = documents.filter { document in
-            document.title.lowercased().contains(lowercaseQuery) ||
-            document.sourceURL.lowercased().contains(lowercaseQuery) ||
-            (document.summary?.lowercased().contains(lowercaseQuery) ?? false)
-        }
-        DispatchQueue.main.async {
-            self.searchResults = filtered
+
+        // First do Neo4j full-text search
+        Neo4jManager.shared.fullTextSearchChunks(query: query) { result in
+            switch result {
+            case .success(let chunks):
+                // Get document IDs from chunks
+                let documentIDs = chunks.compactMap { chunk in
+                    chunk["documentID"] as? String
+                }.compactMap { UUID(uuidString: $0) }
+                
+                // Find documents that match these IDs
+                let neo4jMatches = self.documents.filter { doc in
+                    documentIDs.contains(doc.id)
+                }
+                
+                // Also do traditional search as fallback
+                let lowercaseQuery = query.lowercased()
+                let traditionalMatches = self.documents.filter { document in
+                    let titleMatch = document.title.lowercased().contains(lowercaseQuery)
+                    let urlMatch = document.sourceURL.lowercased().contains(lowercaseQuery)
+                    let summaryMatch = document.summary?.lowercased().contains(lowercaseQuery) ?? false
+                    
+                    var contentMatch = false
+                    if let content = try? String(contentsOf: URL(fileURLWithPath: document.filePath), encoding: .utf8) {
+                        contentMatch = content.lowercased().contains(lowercaseQuery)
+                    }
+                    
+                    return titleMatch || urlMatch || summaryMatch || contentMatch
+                }
+                
+                // Combine results, prioritizing Neo4j matches
+                var combinedResults = neo4jMatches
+                for doc in traditionalMatches {
+                    if !combinedResults.contains(where: { $0.id == doc.id }) {
+                        combinedResults.append(doc)
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.searchResults = combinedResults
+                }
+                
+            case .failure(let error):
+                // Fallback to traditional search
+                DocumentLogger.shared.warning("Neo4j search failed, using traditional search: \(error)")
+                let lowercaseQuery = query.lowercased()
+                let filtered = self.documents.filter { document in
+                    let titleMatch = document.title.lowercased().contains(lowercaseQuery)
+                    let urlMatch = document.sourceURL.lowercased().contains(lowercaseQuery)
+                    let summaryMatch = document.summary?.lowercased().contains(lowercaseQuery) ?? false
+                    
+                    var contentMatch = false
+                    if let content = try? String(contentsOf: URL(fileURLWithPath: document.filePath), encoding: .utf8) {
+                        contentMatch = content.lowercased().contains(lowercaseQuery)
+                    }
+                    
+                    return titleMatch || urlMatch || summaryMatch || contentMatch
+                }
+                DispatchQueue.main.async {
+                    self.searchResults = filtered
+                }
+            }
         }
     }
     

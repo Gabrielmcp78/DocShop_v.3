@@ -135,6 +135,8 @@ struct ClientLibrary {
     let documentation: String
 }
 
-enum ProgrammingLanguage: String, Codable, CaseIterable {
+enum ProgrammingLanguage: String, Codable, CaseIterable, Identifiable {
     case swift, python, javascript, typescript, java, kotlin, go, ruby, csharp
-} 
+    
+    var id: Self { self }
+}

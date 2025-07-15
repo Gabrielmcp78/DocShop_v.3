@@ -119,7 +119,7 @@ class DocumentProcessor: ObservableObject {
         }
     }
     
-    private func processDocument(url: URL, importMethod: ImportMethod = .manual) async throws -> DocumentMetaData {
+    func processDocument(url: URL, importMethod: ImportMethod = .manual) async throws -> DocumentMetaData {
         await MainActor.run {
             self.currentStatus = "Validating URL..."
             self.processingProgress = 0.1
@@ -190,6 +190,14 @@ class DocumentProcessor: ObservableObject {
             importMethod: importMethod,
             jsRenderingUsed: needsJSRendering
         )
+        
+        // Create Neo4j nodes and chunks
+        await MainActor.run {
+            self.currentStatus = "Creating knowledge graph..."
+            self.processingProgress = 0.95
+        }
+        
+        await createNeo4jNodesAndChunks(document: document, content: markdown)
         
         // AI-powered document enhancement
         if aiAnalyzer.isAIAvailable {
@@ -689,6 +697,50 @@ class DocumentProcessor: ObservableObject {
         await MainActor.run {
             self.currentStatus = "Ready"
             self.processingProgress = 0.0
+        }
+    }
+    
+    // MARK: - Neo4j Integration
+    private func createNeo4jNodesAndChunks(document: DocumentMetaData, content: String) async {
+        // Convert DocumentMetaData to IngestedDocument
+        let ingestedDoc = IngestedDocument(
+            id: document.id,
+            type: .markdown,
+            url: URL(string: document.sourceURL)!,
+            originalFilename: URL(string: document.sourceURL)?.lastPathComponent ?? "unknown",
+            importedAt: document.dateImported,
+            title: document.title,
+            author: "Unknown",
+            tags: document.tagsArray
+        )
+        
+        // Create document node in Neo4j
+        Neo4jManager.shared.createDocumentNode(ingestedDoc) { result in
+            switch result {
+            case .success():
+                DocumentLogger.shared.info("Created Neo4j document node for: \(document.title)")
+            case .failure(let error):
+                DocumentLogger.shared.error("Failed to create Neo4j document node: \(error)")
+            }
+        }
+        
+        // Create chunks
+        let chunks = DocumentChunker.chunkMarkdown(document: ingestedDoc, content: content)
+        
+        // Create chunk nodes in Neo4j
+        for chunk in chunks {
+            Neo4jManager.shared.createChunkNode(chunk) { result in
+                switch result {
+                case .success():
+                    // Create relationship between document and chunk
+                    Neo4jManager.shared.createHasChunkRelationship(
+                        documentID: ingestedDoc.id,
+                        chunkID: chunk.id
+                    ) { _ in }
+                case .failure(let error):
+                    DocumentLogger.shared.error("Failed to create Neo4j chunk node: \(error)")
+                }
+            }
         }
     }
     

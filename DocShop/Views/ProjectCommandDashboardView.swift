@@ -25,12 +25,16 @@ struct ProjectCommandDashboardView: View {
                 }
                 Spacer()
                 HStack(spacing: 16) {
-                    Button(action: { /* Start project logic */ }) {
+                    Button(action: { startProject() }) {
                         Label("Start", systemImage: "play.fill")
                     }
-                    Button(action: { /* Pause project logic */ }) {
+                    .disabled(project.status == .active)
+                    
+                    Button(action: { pauseProject() }) {
                         Label("Pause", systemImage: "pause.fill")
                     }
+                    .disabled(project.status != .active)
+                    
                     Button(action: { showAgents.toggle() }) {
                         Label("Agents", systemImage: "person.3.fill")
                     }
@@ -53,5 +57,17 @@ struct ProjectCommandDashboardView: View {
         }
         .glassy()
         .padding()
+    }
+    
+    private func startProject() {
+        Task {
+            await orchestrator.startProject(project)
+        }
+    }
+    
+    private func pauseProject() {
+        Task {
+            await orchestrator.pauseProject(project)
+        }
     }
 } 

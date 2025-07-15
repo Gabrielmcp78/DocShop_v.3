@@ -1,46 +1,99 @@
 import Foundation
-import SwiftUI // Assuming ObservableObject requires SwiftUI or Combine
+import Combine
 
 class ProjectStorage: ObservableObject {
     static let shared = ProjectStorage()
 
     @Published var projects: [Project] = []
     private let projectsFileURL: URL
+    private let backupFileURL: URL
+    private let storageQueue = DispatchQueue(label: "project.storage", qos: .userInitiated)
 
-    init() {
-        // Initialize projectsFileURL - need a proper path here
-        // For now, using a placeholder. This needs refinement.
-        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        projectsFileURL = documentsPath.appendingPathComponent("projects.json")
-        
-        // Attempt to load projects on initialization
+    private init() {
+        let documentsPath = FileManager.default.homeDirectoryForCurrentUser
+            .appendingPathComponent("DocShop/Projects")
+
+        try? FileManager.default.createDirectory(at: documentsPath, withIntermediateDirectories: true)
+
+        self.projectsFileURL = documentsPath.appendingPathComponent("projects.json")
+        self.backupFileURL = documentsPath.appendingPathComponent("projects_backup.json")
+
         Task {
-            await loadProjects()
+            self.projects = await loadProjects()
         }
     }
 
-    func saveProject(_ project: Project) async throws {
-        // TODO: Implement saving logic
-        print("TODO: Implement saveProject")
+    func saveProject(_ project: Project) {
+        if let index = projects.firstIndex(where: { $0.id == project.id }) {
+            projects[index] = project
+        } else {
+            projects.append(project)
+        }
+        saveAllProjects()
     }
 
-    func loadProjects() async throws -> [Project] {
-        // TODO: Implement loading logic
-        print("TODO: Implement loadProjects")
-        return [] // Placeholder
+    func deleteProject(_ project: Project) {
+        projects.removeAll { $0.id == project.id }
+        saveAllProjects()
     }
 
-    func updateProject(_ project: Project) async throws {
-        // TODO: Implement update logic
-        print("TODO: Implement updateProject")
+    func loadProjects() async -> [Project] {
+        guard FileManager.default.fileExists(atPath: projectsFileURL.path) else {
+            return []
+        }
+
+        do {
+            let data = try Data(contentsOf: projectsFileURL)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            return try decoder.decode([Project].self, from: data)
+        } catch {
+            print("Failed to load projects, attempting recovery from backup: \(error)")
+            return await recoverFromBackup()
+        }
     }
 
-    func deleteProject(_ project: Project) async throws {
-        // TODO: Implement delete logic
-        print("TODO: Implement deleteProject")
+    private func saveAllProjects() {
+        storageQueue.async { [weak self] in
+            guard let self = self else { return }
+            do {
+                let encoder = JSONEncoder()
+                encoder.dateEncodingStrategy = .iso8601
+                encoder.outputFormatting = .prettyPrinted
+                let data = try encoder.encode(self.projects)
+
+                if FileManager.default.fileExists(atPath: self.projectsFileURL.path) {
+                    try? FileManager.default.copyItem(at: self.projectsFileURL, to: self.backupFileURL)
+                }
+
+                let tempURL = self.projectsFileURL.appendingPathExtension("tmp")
+                try data.write(to: tempURL, options: .atomic)
+                _ = try FileManager.default.replaceItemAt(self.projectsFileURL, withItemAt: tempURL)
+
+            } catch {
+                print("Failed to save projects: \(error)")
+            }
+        }
+    }
+    
+    private func recoverFromBackup() async -> [Project] {
+        guard FileManager.default.fileExists(atPath: backupFileURL.path) else {
+            return []
+        }
+        do {
+            let data = try Data(contentsOf: backupFileURL)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            let recoveredProjects = try decoder.decode([Project].self, from: data)
+            
+            // Restore the main file from backup
+            try? data.write(to: projectsFileURL, options: .atomic)
+            
+            return recoveredProjects
+        } catch {
+            print("Failed to recover projects from backup: \(error)")
+            return []
+        }
     }
 }
 
-// Need Project definition or import it
-// Assuming Project is defined elsewhere and is Codable
-// import ProjectModel // Example import if Project is in a separate file/module

@@ -120,19 +120,7 @@ struct EnhancedSettingsView: View {
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                NavigationLink(destination: AISearchView()) {
-                    HStack {
-                        Image(systemName: "brain")
-                            .foregroundColor(.purple)
-                        Text("AI-Powered Search")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.vertical, 8)
-                }
-                .buttonStyle(.plain)
+
             }
         }
         .padding(14)

@@ -16,14 +16,8 @@ struct MainPanelView: View {
             LogViewerView()
         case .status:
             SystemStatusView()
-        case .some(.projects):
+        case .projects:
             ProjectOrchestrationView()
-        case .some(.aiSearch):
-            Text("AI Search coming soon…")
-        case .some(.knowledgeGraph):
-            Text("Knowledge Graph coming soon…")
-        case .some(.systemValidation):
-            Text("System Validation coming soon…")
         case nil:
             Text("Select a tool to begin.")
                 .font(.title2)

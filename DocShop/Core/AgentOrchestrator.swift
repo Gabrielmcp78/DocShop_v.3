@@ -12,12 +12,13 @@ class AgentOrchestrator: ObservableObject {
     private let taskDistributor = TaskDistributor()
     private let progressTracker = ProgressTracker()
     private let contextManager = ContextManager()
-    @ObservedObject private var projectStorage = ProjectStorage.shared
+    private var projectStorage = ProjectStorage.shared
    // private let benchmarkEngine = BenchmarkEngine()
     
     private init() {
         Task {
-            projectQueue = try await projectStorage.loadProjects()
+            projectQueue = await projectStorage.loadProjects()
+            // If loadProjects() is not async, remove 'await' here
         }
     }
     
@@ -36,30 +37,31 @@ class AgentOrchestrator: ObservableObject {
         project.tasks = tasks
         // Assign tasks to agents
         TaskDistributor().distribute(tasks: tasks, to: agents)
-        // Add to queue
-        projectQueue.append(project)
         
-        try? await projectStorage.saveProject(project)
+        // Save the new project
+        projectStorage.saveProject(project)
+        
+        // The projectQueue is now managed by ProjectStorage, so we just update it from the source of truth
+        self.projectQueue = projectStorage.projects
         
         return project
     }
     
     func assign(task: ProjectTask, to agent: DevelopmentAgent) {
-        for (projectIndex, var project) in projectQueue.enumerated() {
-            if let taskIndex = project.tasks.firstIndex(where: { $0.id == task.id }) {
-                project.tasks[taskIndex].assignedAgentID = agent.id
-                projectQueue[projectIndex] = project
-                break
+        if let projectIndex = projectQueue.firstIndex(where: { $0.id == task.projectID }) {
+            if let taskIndex = projectQueue[projectIndex].tasks.firstIndex(where: { $0.id == task.id }) {
+                projectQueue[projectIndex].tasks[taskIndex].assignedAgentID = agent.id
+                projectQueue[projectIndex].tasks[taskIndex].status = .assigned
+                projectStorage.saveProject(projectQueue[projectIndex])
             }
         }
     }
     
     func updateStatus(for task: ProjectTask, to status: ProjectTaskStatus) {
-        for (projectIndex, var project) in projectQueue.enumerated() {
-            if let taskIndex = project.tasks.firstIndex(where: { $0.id == task.id }) {
-                project.tasks[taskIndex].status = status
-                projectQueue[projectIndex] = project
-                break
+        if let projectIndex = projectQueue.firstIndex(where: { $0.id == task.projectID }) {
+            if let taskIndex = projectQueue[projectIndex].tasks.firstIndex(where: { $0.id == task.id }) {
+                projectQueue[projectIndex].tasks[taskIndex].status = status
+                projectStorage.saveProject(projectQueue[projectIndex])
             }
         }
     }
@@ -70,6 +72,45 @@ class AgentOrchestrator: ObservableObject {
     
     func project(for id: UUID) -> Project? {
         return projectQueue.first(where: { $0.id == id })
+    }
+    
+    func startProject(_ project: Project) async {
+        guard let projectIndex = projectQueue.firstIndex(where: { $0.id == project.id }) else { return }
+        
+        await MainActor.run {
+            self.projectQueue[projectIndex].status = .active
+            self.systemStatus = .running
+        }
+        
+        // Start executing tasks
+        let activeTasks = project.tasks.filter { $0.status == .assigned || $0.status == .pending }
+        for task in activeTasks {
+            if let agentID = task.assignedAgentID,
+               let agent = agent(for: agentID) {
+                await executeTask(task, with: agent)
+            }
+        }
+        
+        projectStorage.saveProject(projectQueue[projectIndex])
+    }
+    
+    func pauseProject(_ project: Project) async {
+        guard let projectIndex = projectQueue.firstIndex(where: { $0.id == project.id }) else { return }
+        
+        await MainActor.run {
+            self.projectQueue[projectIndex].status = .paused
+            self.systemStatus = .paused
+        }
+        
+        projectStorage.saveProject(projectQueue[projectIndex])
+    }
+    
+    private func executeTask(_ task: ProjectTask, with agent: DevelopmentAgent) async {
+        await agent.perform(task: task) { result in
+            Task {
+                await self.updateStatus(for: task, to: result.success ? .completed : .error)
+            }
+        }
     }
 }
 

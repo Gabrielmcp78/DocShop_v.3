@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(rm:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(xcodebuild:*)",
+      "mcp__desktop-commander__search_code",
+      "mcp__desktop-commander__read_file",
+      "Bash(rg:*)"
     ],
     "deny": []
   }

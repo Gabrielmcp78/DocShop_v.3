@@ -4,8 +4,6 @@ struct AgentPanelView: View {
     let agents: [DevelopmentAgent]
     @State private var showAssignTaskSheet = false
     @State private var selectedAgent: DevelopmentAgent?
-    @State private var showMessageAlert = false
-    @State private var showLogsAlert = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -16,7 +14,7 @@ struct AgentPanelView: View {
                 Text("No agents assigned.")
                     .foregroundColor(.secondary)
             } else {
-                ForEach(agents, id: \ .id) { agent in
+                ForEach(agents, id: \.id) { agent in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(agent.name)
@@ -32,18 +30,6 @@ struct AgentPanelView: View {
                         }) {
                             Label("Assign Task", systemImage: "plus.circle")
                         }
-                        Button(action: {
-                            selectedAgent = agent
-                            showMessageAlert = true
-                        }) {
-                            Label("Message", systemImage: "bubble.left")
-                        }
-                        Button(action: {
-                            selectedAgent = agent
-                            showLogsAlert = true
-                        }) {
-                            Label("Logs", systemImage: "doc.text.magnifyingglass")
-                        }
                     }
                     Divider()
                 }
@@ -57,12 +43,6 @@ struct AgentPanelView: View {
             } else {
                 Text("No agent selected.")
             }
-        }
-        .alert(isPresented: $showMessageAlert) {
-            Alert(title: Text("Message Agent"), message: Text("Messaging \(selectedAgent?.name ?? "") (stub)"), dismissButton: .default(Text("OK")))
-        }
-        .alert(isPresented: $showLogsAlert) {
-            Alert(title: Text("Agent Logs"), message: Text("Viewing logs for \(selectedAgent?.name ?? "") (stub)"), dismissButton: .default(Text("OK")))
         }
     }
 } 
@@ -129,7 +109,7 @@ extension ProjectTask {
                 priority: .medium,
                 assignedAgentID: nil,
                 benchmarks: [],
-                context: TaskContext(info: "")
+                context: TaskContext(info: ""), projectID: UUID()
             ),
             ProjectTask(
                 id: UUID(),
@@ -139,7 +119,7 @@ extension ProjectTask {
                 priority: .medium,
                 assignedAgentID: nil,
                 benchmarks: [],
-                context: TaskContext(info: "")
+                context: TaskContext(info: ""), projectID: UUID()
             ),
             ProjectTask(
                 id: UUID(),
@@ -149,8 +129,9 @@ extension ProjectTask {
                 priority: .medium,
                 assignedAgentID: nil,
                 benchmarks: [],
-                context: TaskContext(info: "")
+                context: TaskContext(info: ""), projectID: UUID()
             )
         ]
     }
 } 
+

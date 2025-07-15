@@ -10,30 +10,7 @@ struct ContentView: View {
             EnhancedSidebarView(selection: $selectedSidebarItem)
                 .navigationSplitViewColumnWidth(min: 160, ideal: 180, max: 200)
         } detail: {
-            Group {
-                switch selectedSidebarItem {
-                case .library:
-                    AnyView(LibraryView())
-                case .importItem:
-                    AnyView(DocumentDropView())
-                case .settings:
-                    AnyView(EnhancedSettingsView())
-                case .logs:
-                    AnyView(LogViewerView())
-                case .status:
-                    AnyView(SystemStatusView())
-                case .projects:
-                    AnyView(ProjectOrchestrationView())
-                case .aiSearch:
-                    AnyView(AISearchView())
-                case .none:
-                    AnyView(EmptyStateView())
-                case .some(.knowledgeGraph):
-                    AnyView(Text("Knowledge Graph View")) // Replace with real view if available
-                case .some(.systemValidation):
-                    AnyView(Text("System Validation View"))
-                }
-            }
+            selectedDetailView(for: selectedSidebarItem)
             .navigationSplitViewColumnWidth(min: 400, ideal: 600, max: .infinity)
         }
         .toolbar {
@@ -62,18 +39,35 @@ struct ContentView: View {
             DocumentStorage.shared.cleanupOrphanedFiles()
         }
     }
+    
+    @ViewBuilder
+    private func selectedDetailView(for item: SidebarItem?) -> some View {
+        switch item {
+        case .library:
+            LibraryView()
+        case .importItem:
+            DocumentDropView()
+        case .settings:
+            EnhancedSettingsView()
+        case .logs:
+            LogViewerView()
+        case .status:
+            SystemStatusView()
+        case .projects:
+            ProjectOrchestrationView()
+        case .none:
+            EmptyStateView()
+        }
+    }
 }
 
 enum SidebarItem: String, CaseIterable, Hashable {
     case library = "library"
     case importItem = "import"
-    case settings = "settings"
-    case logs = "logs"
-    case status = "status"
     case projects = "projects"
-    case aiSearch = "aiSearch"
-    case knowledgeGraph = "knowledgeGraph"
-    case systemValidation = "systemValidation"
+    case status = "status"
+    case logs = "logs"
+    case settings = "settings"
     
     var displayName: String {
         switch self {
@@ -81,20 +75,14 @@ enum SidebarItem: String, CaseIterable, Hashable {
             return "Library"
         case .importItem:
             return "Import"
-        case .settings:
-            return "Settings"
-        case .logs:
-            return "Logs"
-        case .status:
-            return "System Status"
         case .projects:
             return "Projects"
-        case .aiSearch:
-            return "AI Search"
-        case .knowledgeGraph:
-            return "Knowledge Graph"
-        case .systemValidation:
-            return "System Validation"
+        case .status:
+            return "System Status"
+        case .logs:
+            return "Logs"
+        case .settings:
+            return "Settings"
         }
     }
     
@@ -104,20 +92,14 @@ enum SidebarItem: String, CaseIterable, Hashable {
             return "books.vertical"
         case .importItem:
             return "square.and.arrow.down"
-        case .settings:
-            return "gear"
-        case .logs:
-            return "list.bullet.rectangle"
-        case .status:
-            return "info.circle"
         case .projects:
             return "folder.badge.gearshape"
-        case .aiSearch:
-            return "sparkles"
-        case .knowledgeGraph:
-            return "circle.grid.cross"
-        case .systemValidation:
-            return "checkmark.shield"
+        case .status:
+            return "info.circle"
+        case .logs:
+            return "list.bullet.rectangle"
+        case .settings:
+            return "gear"
         }
     }
 }
@@ -133,16 +115,11 @@ struct EnhancedSidebarView: View {
                 sidebarRow(for: .library)
                 sidebarRow(for: .importItem)
             }
-            Section(header: Text("AI & Search")) {
-                sidebarRow(for: .aiSearch)
-                sidebarRow(for: .knowledgeGraph)
-            }
-            Section(header: Text("Projects & Agents")) {
+            Section(header: Text("Projects")) {
                 sidebarRow(for: .projects)
             }
             Section(header: Text("System")) {
                 sidebarRow(for: .status)
-                sidebarRow(for: .systemValidation)
                 sidebarRow(for: .logs)
                 sidebarRow(for: .settings)
             }
@@ -212,3 +189,4 @@ struct EmptyStateView: View {
 #Preview {
     ContentView()
 }
+

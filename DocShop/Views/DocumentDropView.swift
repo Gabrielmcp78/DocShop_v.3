@@ -61,9 +61,9 @@ struct DocumentDropView: View {
 
             // Drag-and-drop area
             Rectangle()
-                .fill(Color.white.opacity(0.08))
+                .fill(.ultraThinMaterial)
                 .frame(height: 80)
-                .cornerRadius(18)
+                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
                 .overlay(
                     Text("Drop files here")
                         .foregroundColor(.secondary)
@@ -161,9 +161,9 @@ struct DocumentDropView: View {
         importError = nil
         Task {
             do {
-                let doc = try await DocumentIngestionManager.shared.ingestFile(at: url)
-                let meta = DocumentMetaData(title: doc.title, sourceURL: doc.url.absoluteString, filePath: doc.url.path, fileSize: 0)
-                let content = try? DocumentStorage.shared.loadDocument(at: doc.url)
+                // Use DocumentProcessor for full processing pipeline including chunking and AI analysis
+                let meta = try await DocumentProcessor.shared.processDocument(url: url, importMethod: .manual)
+                let content = try? DocumentStorage.shared.loadDocument(at: URL(fileURLWithPath: meta.filePath))
                 await MainActor.run {
                     previewDocument = meta
                     previewContent = content ?? ""
@@ -279,9 +279,6 @@ struct DocumentPreviewModal: View {
         }
         .padding(28)
         .frame(minWidth: 420, maxWidth: 600)
-        .background(.ultraThinMaterial)
-        .cornerRadius(24)
-        .shadow(radius: 18)
         .glassy()
     }
 }
@@ -314,9 +311,6 @@ struct DuplicateDecisionModal: View {
         }
         .padding(28)
         .frame(minWidth: 420, maxWidth: 520)
-        .background(.ultraThinMaterial)
-        .cornerRadius(24)
-        .shadow(radius: 18)
         .glassy()
     }
 }

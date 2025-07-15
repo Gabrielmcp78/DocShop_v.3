@@ -11,22 +11,65 @@
 		434FB8ED2E22D7A300AA4B57 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FB8EC2E22D7A300AA4B57 /* SwiftUI.framework */; };
 		437444E52E107EEB0063FED6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 437444E42E107EEB0063FED6 /* SwiftSoup */; };
 		439363D12E23DC4300A8CD47 /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 439363D02E23DC4300A8CD47 /* VisualEffects */; };
+		43F6CB5F2E24948F00B4E0C5 /* Hummingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB5E2E24948F00B4E0C5 /* Hummingbird */; };
+		43F6CB612E24948F00B4E0C5 /* HummingbirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB602E24948F00B4E0C5 /* HummingbirdCore */; };
+		43F6CB632E24948F00B4E0C5 /* HummingbirdHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB622E24948F00B4E0C5 /* HummingbirdHTTP2 */; };
+		43F6CB652E24948F00B4E0C5 /* HummingbirdRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB642E24948F00B4E0C5 /* HummingbirdRouter */; };
+		43F6CB672E24948F00B4E0C5 /* HummingbirdTLS in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB662E24948F00B4E0C5 /* HummingbirdTLS */; };
+		43F6CB8D2E24A6F600B4E0C5 /* Hummingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB8C2E24A6F600B4E0C5 /* Hummingbird */; };
+		43F6CBA92E24FA6800B4E0C5 /* HummingbirdHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CBA82E24FA6800B4E0C5 /* HummingbirdHTTP2 */; };
+		43F6CBAB2E24FA6C00B4E0C5 /* HummingbirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CBAA2E24FA6C00B4E0C5 /* HummingbirdCore */; };
+		43F6CBAD2E24FA7000B4E0C5 /* HummingbirdTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CBAC2E24FA7000B4E0C5 /* HummingbirdTesting */; };
+		43F6CBAF2E24FA7300B4E0C5 /* HummingbirdTLS in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CBAE2E24FA7300B4E0C5 /* HummingbirdTLS */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43F6CB7E2E24A50C00B4E0C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4345A80F2E0FF5FA002D6A3F /* DocShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434FB8EA2E22D75900AA4B57 /* FoundationModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoundationModels.framework; path = System/Library/Frameworks/FoundationModels.framework; sourceTree = SDKROOT; };
 		434FB8EC2E22D7A300AA4B57 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		43F6CB802E24A50C00B4E0C5 /* DocShopAPI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DocShopAPI; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		437444D52E1057E40063FED6 /* Exceptions for "DocShop" folder in "DocShop" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				API/APIServer.swift,
+				API/DocumentAPI.swift,
+				API/FilesystemAPI.swift,
+				API/ShellAPI.swift,
 				Info_old.plist,
 				Info.plist,
 			);
 			target = 4345A80E2E0FF5FA002D6A3F /* DocShop */;
+		};
+		43F6CB882E24A5BE00B4E0C5 /* Exceptions for "DocShop" folder in "DocShopAPI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				API/APIServer.swift,
+				API/CustomRequestContext.swift,
+				API/DocumentAPI.swift,
+				API/FilesystemAPI.swift,
+				API/ShellAPI.swift,
+				Core/DocumentLogger.swift,
+				Core/DocumentProcessorConfig.swift,
+				Data/DocLibraryIndex.swift,
+				Data/DocumentStorage.swift,
+				Models/DocumentMetaData.swift,
+			);
+			target = 43F6CB7F2E24A50C00B4E0C5 /* DocShopAPI */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -35,8 +78,14 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				437444D52E1057E40063FED6 /* Exceptions for "DocShop" folder in "DocShop" target */,
+				43F6CB882E24A5BE00B4E0C5 /* Exceptions for "DocShop" folder in "DocShopAPI" target */,
 			);
 			path = DocShop;
+			sourceTree = "<group>";
+		};
+		43F6CB812E24A50C00B4E0C5 /* DocShopAPI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DocShopAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -46,10 +95,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F6CB652E24948F00B4E0C5 /* HummingbirdRouter in Frameworks */,
+				43F6CB5F2E24948F00B4E0C5 /* Hummingbird in Frameworks */,
 				437444E52E107EEB0063FED6 /* SwiftSoup in Frameworks */,
 				439363D12E23DC4300A8CD47 /* VisualEffects in Frameworks */,
 				434FB8ED2E22D7A300AA4B57 /* SwiftUI.framework in Frameworks */,
+				43F6CB632E24948F00B4E0C5 /* HummingbirdHTTP2 in Frameworks */,
+				43F6CB612E24948F00B4E0C5 /* HummingbirdCore in Frameworks */,
+				43F6CB672E24948F00B4E0C5 /* HummingbirdTLS in Frameworks */,
 				434FB8EB2E22D75900AA4B57 /* FoundationModels.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43F6CB7D2E24A50C00B4E0C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F6CBA92E24FA6800B4E0C5 /* HummingbirdHTTP2 in Frameworks */,
+				43F6CBAB2E24FA6C00B4E0C5 /* HummingbirdCore in Frameworks */,
+				43F6CBAD2E24FA7000B4E0C5 /* HummingbirdTesting in Frameworks */,
+				43F6CB8D2E24A6F600B4E0C5 /* Hummingbird in Frameworks */,
+				43F6CBAF2E24FA7300B4E0C5 /* HummingbirdTLS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +125,7 @@
 		4345A8062E0FF5FA002D6A3F = {
 			isa = PBXGroup;
 			children = (
+				43F6CB812E24A50C00B4E0C5 /* DocShopAPI */,
 				4345A8102E0FF5FA002D6A3F /* Products */,
 				4345A8112E0FF5FA002D6A3F /* DocShop */,
 				434FB8E92E22D75900AA4B57 /* Frameworks */,
@@ -69,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4345A80F2E0FF5FA002D6A3F /* DocShop.app */,
+				43F6CB802E24A50C00B4E0C5 /* DocShopAPI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,10 +172,42 @@
 			packageProductDependencies = (
 				437444E42E107EEB0063FED6 /* SwiftSoup */,
 				439363D02E23DC4300A8CD47 /* VisualEffects */,
+				43F6CB5E2E24948F00B4E0C5 /* Hummingbird */,
+				43F6CB602E24948F00B4E0C5 /* HummingbirdCore */,
+				43F6CB622E24948F00B4E0C5 /* HummingbirdHTTP2 */,
+				43F6CB642E24948F00B4E0C5 /* HummingbirdRouter */,
+				43F6CB662E24948F00B4E0C5 /* HummingbirdTLS */,
 			);
 			productName = DocShop;
 			productReference = 4345A80F2E0FF5FA002D6A3F /* DocShop.app */;
 			productType = "com.apple.product-type.application";
+		};
+		43F6CB7F2E24A50C00B4E0C5 /* DocShopAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43F6CB842E24A50C00B4E0C5 /* Build configuration list for PBXNativeTarget "DocShopAPI" */;
+			buildPhases = (
+				43F6CB7C2E24A50C00B4E0C5 /* Sources */,
+				43F6CB7D2E24A50C00B4E0C5 /* Frameworks */,
+				43F6CB7E2E24A50C00B4E0C5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				43F6CB812E24A50C00B4E0C5 /* DocShopAPI */,
+			);
+			name = DocShopAPI;
+			packageProductDependencies = (
+				43F6CB8C2E24A6F600B4E0C5 /* Hummingbird */,
+				43F6CBA82E24FA6800B4E0C5 /* HummingbirdHTTP2 */,
+				43F6CBAA2E24FA6C00B4E0C5 /* HummingbirdCore */,
+				43F6CBAC2E24FA7000B4E0C5 /* HummingbirdTesting */,
+				43F6CBAE2E24FA7300B4E0C5 /* HummingbirdTLS */,
+			);
+			productName = DocShopAPI;
+			productReference = 43F6CB802E24A50C00B4E0C5 /* DocShopAPI */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -120,6 +220,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					4345A80E2E0FF5FA002D6A3F = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					43F6CB7F2E24A50C00B4E0C5 = {
 						CreatedOnToolsVersion = 26.0;
 					};
 				};
@@ -136,6 +239,7 @@
 			packageReferences = (
 				437444E32E107EEB0063FED6 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				439363CF2E23DC4300A8CD47 /* XCRemoteSwiftPackageReference "VisualEffects" */,
+				43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4345A8102E0FF5FA002D6A3F /* Products */;
@@ -143,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				4345A80E2E0FF5FA002D6A3F /* DocShop */,
+				43F6CB7F2E24A50C00B4E0C5 /* DocShopAPI */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +264,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		4345A80B2E0FF5FA002D6A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43F6CB7C2E24A50C00B4E0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.DocShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.DocShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,6 +463,32 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		43F6CB852E24A50C00B4E0C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634L69Q622;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		43F6CB862E24A50C00B4E0C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634L69Q622;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -377,6 +515,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		43F6CB842E24A50C00B4E0C5 /* Build configuration list for PBXNativeTarget "DocShopAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43F6CB852E24A50C00B4E0C5 /* Debug */,
+				43F6CB862E24A50C00B4E0C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -396,6 +543,14 @@
 				minimumVersion = 1.0.3;
 			};
 		};
+		43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hummingbird-project/hummingbird.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.15.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +563,56 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 439363CF2E23DC4300A8CD47 /* XCRemoteSwiftPackageReference "VisualEffects" */;
 			productName = VisualEffects;
+		};
+		43F6CB5E2E24948F00B4E0C5 /* Hummingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = Hummingbird;
+		};
+		43F6CB602E24948F00B4E0C5 /* HummingbirdCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdCore;
+		};
+		43F6CB622E24948F00B4E0C5 /* HummingbirdHTTP2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdHTTP2;
+		};
+		43F6CB642E24948F00B4E0C5 /* HummingbirdRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdRouter;
+		};
+		43F6CB662E24948F00B4E0C5 /* HummingbirdTLS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdTLS;
+		};
+		43F6CB8C2E24A6F600B4E0C5 /* Hummingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = Hummingbird;
+		};
+		43F6CBA82E24FA6800B4E0C5 /* HummingbirdHTTP2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdHTTP2;
+		};
+		43F6CBAA2E24FA6C00B4E0C5 /* HummingbirdCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdCore;
+		};
+		43F6CBAC2E24FA7000B4E0C5 /* HummingbirdTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdTesting;
+		};
+		43F6CBAE2E24FA7300B4E0C5 /* HummingbirdTLS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */;
+			productName = HummingbirdTLS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

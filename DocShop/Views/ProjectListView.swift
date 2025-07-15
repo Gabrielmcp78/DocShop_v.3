@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct ProjectListView: View {
-    @ObservedObject private var orchestrator = AgentOrchestrator.shared
+    @ObservedObject private var projectStorage = ProjectStorage.shared
     @Binding var selectedProject: Project?
     
     var body: some View {
         List(selection: $selectedProject) {
-            ForEach(orchestrator.projectQueue) { project in
+            ForEach(projectStorage.projects) { project in
                 HStack {
                     VStack(alignment: .leading) {
                         Text(project.name)

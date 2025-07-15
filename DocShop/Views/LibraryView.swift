@@ -12,6 +12,8 @@ struct LibraryView: View {
 
     var filteredDocuments: [DocumentMetaData] {
         var documents = library.documents
+        
+        // Simple, effective search
         if !searchText.isEmpty {
             documents = documents.filter { doc in
                 doc.displayTitle.localizedCaseInsensitiveContains(searchText) ||
@@ -20,6 +22,7 @@ struct LibraryView: View {
                 doc.tagsArray.contains { $0.localizedCaseInsensitiveContains(searchText) }
             }
         }
+        
         if let selectedTag = selectedTag {
             documents = documents.filter { $0.tags?.contains(selectedTag) ?? false }
         }
@@ -27,11 +30,28 @@ struct LibraryView: View {
             documents = documents.filter { $0.isFavorite }
         }
         switch sortOption {
-        case .title: documents.sort { $0.title.localizedCaseInsensitiveCompare($1.title) == .orderedAscending }
-        case .dateImported: documents.sort { $0.dateImported > $1.dateImported }
-        case .dateAccessed: documents.sort { ($0.dateLastAccessed ?? .distantPast) > ($1.dateLastAccessed ?? .distantPast) }
-        case .fileSize: documents.sort { $0.fileSize > $1.fileSize }
-        case .accessCount: documents.sort { $0.accessCount > $1.accessCount }
+        case .title: 
+            documents.sort { $0.title.localizedCaseInsensitiveCompare($1.title) == .orderedAscending }
+        case .dateImported: 
+            documents.sort { $0.dateImported > $1.dateImported }
+        case .dateAccessed: 
+            documents.sort { ($0.dateLastAccessed ?? .distantPast) > ($1.dateLastAccessed ?? .distantPast) }
+        case .fileSize: 
+            documents.sort { $0.fileSize > $1.fileSize }
+        case .accessCount: 
+            documents.sort { $0.accessCount > $1.accessCount }
+        case .company:
+            documents.sort { doc1, doc2 in
+                let company1 = extractCompany(from: doc1.sourceURL)
+                let company2 = extractCompany(from: doc2.sourceURL)
+                return company1.localizedCaseInsensitiveCompare(company2) == .orderedAscending
+            }
+        case .language:
+            documents.sort { doc1, doc2 in
+                let lang1 = extractLanguage(from: doc1.tagsArray)
+                let lang2 = extractLanguage(from: doc2.tagsArray)
+                return lang1.localizedCaseInsensitiveCompare(lang2) == .orderedAscending
+            }
         }
         return documents
     }
@@ -40,6 +60,37 @@ struct LibraryView: View {
         let allTagSets = library.documents.compactMap { $0.tags }
         let combined = Set(allTagSets.flatMap { $0 })
         return Array(combined).sorted()
+    }
+    
+    // Helper functions for sorting
+    private func extractCompany(from url: String) -> String {
+        let lowercaseURL = url.lowercased()
+        if lowercaseURL.contains("apple") { return "Apple" }
+        if lowercaseURL.contains("google") { return "Google" }
+        if lowercaseURL.contains("microsoft") { return "Microsoft" }
+        if lowercaseURL.contains("amazon") { return "Amazon" }
+        if lowercaseURL.contains("meta") || lowercaseURL.contains("facebook") { return "Meta" }
+        if lowercaseURL.contains("github") { return "GitHub" }
+        if lowercaseURL.contains("stackoverflow") { return "Stack Overflow" }
+        // Extract domain name as fallback
+        if let domain = URL(string: url)?.host {
+            return domain.replacingOccurrences(of: "www.", with: "").capitalized
+        }
+        return "Unknown"
+    }
+    
+    private func extractLanguage(from tags: [String]) -> String {
+        let lowercaseTags = tags.map { $0.lowercased() }
+        if lowercaseTags.contains("swift") { return "Swift" }
+        if lowercaseTags.contains("python") { return "Python" }
+        if lowercaseTags.contains("javascript") || lowercaseTags.contains("js") { return "JavaScript" }
+        if lowercaseTags.contains("java") { return "Java" }
+        if lowercaseTags.contains("typescript") || lowercaseTags.contains("ts") { return "TypeScript" }
+        if lowercaseTags.contains("rust") { return "Rust" }
+        if lowercaseTags.contains("go") || lowercaseTags.contains("golang") { return "Go" }
+        if lowercaseTags.contains("c++") || lowercaseTags.contains("cpp") { return "C++" }
+        if lowercaseTags.contains("c#") || lowercaseTags.contains("csharp") { return "C#" }
+        return "General"
     }
 
     var body: some View {
@@ -53,10 +104,7 @@ struct LibraryView: View {
                     errorSection(error)
                 }
             }
-            .frame(maxWidth: selectedDocument == nil ? .infinity : 420)
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-            .shadow(color: .black.opacity(0.07), radius: 16, x: 0, y: 8)
+            .frame(maxWidth: selectedDocument == nil ? .infinity : 380)
             .padding([.top, .bottom, .leading], 16)
             .padding(.trailing, 8)
             .glassy()
@@ -64,13 +112,12 @@ struct LibraryView: View {
             if let selectedDocument = selectedDocument {
                 Divider()
                 DocumentDetailView(document: selectedDocument)
-                    .frame(minWidth: 420, maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(minWidth: 600, idealWidth: 800, maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.move(edge: .trailing).combined(with: .opacity))
                     .animation(.easeInOut(duration: 0.5), value: selectedDocument.id)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.ultraThinMaterial)
         .animation(.easeInOut(duration: 0.5), value: selectedDocument != nil)
         .sheet(isPresented: $showingTagEditor) {
             TagEditorView()
@@ -187,7 +234,7 @@ struct LibraryView: View {
             Text(error).font(.caption).foregroundColor(.secondary)
         }
         .padding()
-        .background(Color.orange.opacity(0.1))
+        .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.horizontal)
     }
@@ -207,9 +254,9 @@ struct EnhancedDocumentRowView: View {
                         Image(systemName: "heart.fill").foregroundColor(.red).font(.caption)
                     }
                     if document.isRecentlyAccessed {
-                        Image(systemName: "eye.fill").foregroundColor(.blue).font(.caption)
+                        Image(systemName: "eye.fill").foregroundColor(.primary).font(.caption)
                     }
-                    Text(document.contentType.displayName).font(.caption2).padding(.horizontal, 4).padding(.vertical, 1).background(Color.blue.opacity(0.1)).cornerRadius(4)
+                    Text(document.contentType.displayName).font(.caption2).padding(.horizontal, 4).padding(.vertical, 1).background(.ultraThinMaterial).foregroundColor(.primary).cornerRadius(4)
                     Text(document.importMethod.displayName).font(.caption2).padding(.horizontal, 4).padding(.vertical, 1).background(importMethodColor(for: document.importMethod).opacity(0.1)).foregroundColor(importMethodColor(for: document.importMethod)).cornerRadius(4)
                 }
             }
@@ -218,7 +265,7 @@ struct EnhancedDocumentRowView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 4) {
                         ForEach(document.tagsArray.prefix(3), id: \.self) { tag in
-                            Text(tag).font(.caption2).padding(.horizontal, 6).padding(.vertical, 2).background(Color.gray.opacity(0.2)).cornerRadius(8)
+                            Text(tag).font(.caption2).padding(.horizontal, 6).padding(.vertical, 2).background(.ultraThinMaterial).cornerRadius(8)
                         }
                         if document.tagsArray.count > 3 {
                             Text("+\(document.tagsArray.count - 3)").font(.caption2).foregroundColor(.secondary)
@@ -237,7 +284,7 @@ struct EnhancedDocumentRowView: View {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text(document.formattedFileSize).font(.caption2).foregroundColor(.secondary)
                     if let linkCount = document.extractedLinks?.count, linkCount > 0 {
-                        Label("\(linkCount)", systemImage: "link").font(.caption2).foregroundColor(.blue)
+                        Label("\(linkCount)", systemImage: "link").font(.caption2).foregroundColor(.primary)
                     }
                     if document.dateLastAccessed != nil {
                         Text("Last: \(document.formattedLastAccessed)").font(.caption2).foregroundColor(.secondary)
@@ -289,6 +336,9 @@ enum SortOption: String, CaseIterable {
     case dateAccessed = "dateAccessed"
     case fileSize = "fileSize"
     case accessCount = "accessCount"
+    case company = "company"
+    case language = "language"
+    
     var displayName: String {
         switch self {
         case .title: return "Title"
@@ -296,6 +346,8 @@ enum SortOption: String, CaseIterable {
         case .dateAccessed: return "Last Accessed"
         case .fileSize: return "File Size"
         case .accessCount: return "Access Count"
+        case .company: return "Company"
+        case .language: return "Language"
         }
     }
 }
@@ -321,7 +373,7 @@ struct TagEditorView: View {
                     Text("Existing Tags").font(.headline)
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 8) {
                         ForEach(allTags, id: \.self) { tag in
-                            Text(tag).font(.caption).padding(.horizontal, 8).padding(.vertical, 4).background(Color.blue.opacity(0.1)).cornerRadius(8)
+                            Text(tag).font(.caption).padding(.horizontal, 8).padding(.vertical, 4).background(.ultraThinMaterial).cornerRadius(8)
                         }
                     }
                 }

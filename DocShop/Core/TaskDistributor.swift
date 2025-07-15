@@ -2,23 +2,26 @@ import Foundation
 
 class TaskDistributor {
     func distribute(tasks: [ProjectTask], to agents: [DevelopmentAgent]) {
-        // Assign tasks to agents based on best fit (capabilities, load balancing)
         guard !agents.isEmpty else { return }
         var agentTaskCounts = [UUID: Int]()
         for agent in agents { agentTaskCounts[agent.id] = 0 }
-        let executor = LocalAgentExecutor()
-        for task in tasks {
-            // Find best-fit agent (by capability match, then least loaded)
+        
+        for var task in tasks {
             let bestAgent = agents.min { a, b in
                 let aScore = score(agent: a, task: task) + (agentTaskCounts[a.id] ?? 0)
                 let bScore = score(agent: b, task: task) + (agentTaskCounts[b.id] ?? 0)
                 return aScore < bScore
             }
+            
             if let agent = bestAgent {
                 agentTaskCounts[agent.id, default: 0] += 1
-                executor.execute(task: task, for: agent) { result in
-                    // Log or handle result as needed
-                    print("Task '", task.title, "' completed by agent '", agent.name, "': ", result.success ? "Success" : "Failure")
+                task.assignedAgentID = agent.id
+                AgentOrchestrator.shared.updateStatus(for: task, to: .assigned)
+                
+                agent.perform(task: task) { result in
+                    let finalStatus: ProjectTaskStatus = result.success ? .completed : .error
+                    AgentOrchestrator.shared.updateStatus(for: task, to: finalStatus)
+                    print("Task '\(task.title)' completed by agent '\(agent.name)' with result: \(result.success ? "Success" : "Failure")")
                 }
             }
         }

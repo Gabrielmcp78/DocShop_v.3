@@ -6,6 +6,7 @@ struct DocumentDetailView: View {
     @State private var content: String = ""
     @State private var isLoading = true
     @State private var error: String?
+    @State private var showOutline = false
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -17,34 +18,43 @@ struct DocumentDetailView: View {
                 }) {
                     Image(systemName: "chevron.left")
                         .font(.title2)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.primary)
                 }
                 .buttonStyle(.plain)
                 
                 Spacer()
                 
-                Menu {
-                    Button("Open in Browser") {
-                        if let url = URL(string: document.sourceURL) {
-                            NSWorkspace.shared.open(url)
+                HStack(spacing: 12) {
+                    Button(action: { showOutline.toggle() }) {
+                        Image(systemName: "list.bullet.rectangle")
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Show Document Outline")
+                    
+                    Menu {
+                        Button("Open in Browser") {
+                            if let url = URL(string: document.sourceURL) {
+                                NSWorkspace.shared.open(url)
+                            }
                         }
+                        Button("Copy Link") {
+                            NSPasteboard.general.clearContents()
+                            NSPasteboard.general.setString(document.sourceURL, forType: .string)
+                        }
+                        Button("Export Content") {
+                            saveToFile()
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                            .font(.title2)
+                            .foregroundColor(.primary)
                     }
-                    Button("Copy Link") {
-                        NSPasteboard.general.clearContents()
-                        NSPasteboard.general.setString(document.sourceURL, forType: .string)
-                    }
-                    Button("Export Content") {
-                        saveToFile()
-                    }
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                        .font(.title2)
-                        .foregroundColor(.blue)
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
             }
             .padding()
-            .background(.ultraThinMaterial)
             
             // Document Header
             VStack(alignment: .leading, spacing: 12) {
@@ -59,11 +69,10 @@ struct DocumentDetailView: View {
                 }) {
                     HStack {
                         Image(systemName: "link")
-                            .foregroundColor(.clear
-                            )
+                            .foregroundColor(.primary)
                         Text(document.sourceURL)
                             .font(.caption)
-                            .foregroundColor(.clear)
+                            .foregroundColor(.primary)
                             .underline()
                     }
                 }
@@ -82,7 +91,6 @@ struct DocumentDetailView: View {
                 }
             }
             .padding()
-            .background(.ultraThinMaterial)
             
             Divider()
             
@@ -116,31 +124,43 @@ struct DocumentDetailView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()
             } else {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
-                        // Enhanced markdown content with clickable links
-                        MarkdownContentView(content: content, searchText: "")
-                            .padding()
+                HStack(spacing: 0) {
+                    // Main content
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 16) {
+                            // Enhanced markdown content with clickable links
+                            MarkdownViewerView(content: content)
+                                .padding()
+                        }
                     }
-                }
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Menu("Export") {
-                            Button("Copy to Clipboard") {
-                                NSPasteboard.general.clearContents()
-                                NSPasteboard.general.setString(content, forType: .string)
-                            }
-                            
-                            Button("Save As...") {
-                                saveToFile()
-                            }
-                            
-                            Button("Open in External Editor") {
-                                openInExternalEditor()
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            Menu("Export") {
+                                Button("Copy to Clipboard") {
+                                    NSPasteboard.general.clearContents()
+                                    NSPasteboard.general.setString(content, forType: .string)
+                                }
+                                
+                                Button("Save As...") {
+                                    saveToFile()
+                                }
+                                
+                                Button("Open in External Editor") {
+                                    openInExternalEditor()
+                                }
                             }
                         }
                     }
+                    
+                    // Outline sidebar
+                    if showOutline {
+                        Divider()
+                        DocumentOutlineView(document: document)
+                            .frame(width: 300)
+                            .transition(.move(edge: .trailing))
+                    }
                 }
+                .animation(.easeInOut(duration: 0.3), value: showOutline)
             }
         }
         .onAppear {

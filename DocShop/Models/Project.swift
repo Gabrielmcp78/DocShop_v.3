@@ -55,10 +55,13 @@ struct ProjectTask: Identifiable, Codable, Hashable {
         // Generate tasks based on requirements
         for language in project.requirements.targetLanguages {
             tasks.append(ProjectTask(
+                id: UUID(),
                 title: "Generate \(language.rawValue) SDK",
                 description: "Create client library for \(language.rawValue)",
                 status: .pending,
                 priority: .high,
+                assignedAgentID: nil,
+                benchmarks: [],
                 context: TaskContext(info: "sdk_generation"),
                 projectID: project.id
             ))
@@ -67,10 +70,13 @@ struct ProjectTask: Identifiable, Codable, Hashable {
         // Add documentation tasks
         for docType in project.requirements.documentationRequirements {
             tasks.append(ProjectTask(
+                id: UUID(),
                 title: "Create \(docType.rawValue)",
                 description: "Generate \(docType.rawValue) documentation",
                 status: .pending,
                 priority: .medium,
+                assignedAgentID: nil,
+                benchmarks: [],
                 context: TaskContext(info: "documentation"),
                 projectID: project.id
             ))
@@ -112,18 +118,25 @@ struct TaskContext: Codable, Hashable {
     let info: String // Placeholder for real context data
 }
 
-enum SDKFeature: String, Codable, Hashable, CaseIterable {
+enum SDKFeature: String, Codable, Hashable, CaseIterable, Identifiable {
     case authentication, errorHandling, logging, asyncSupport, customEndpoints, codeExamples
+    
+    var id: Self { self }
 }
 
-enum DocumentationType: String, Codable, Hashable, CaseIterable {
+enum DocumentationType: String, Codable, Hashable, CaseIterable, Identifiable {
     case apiReference, gettingStarted, tutorials, faq, changelog, architecture
+    
+    var id: Self { self }
 }
 
-enum TestingType: String, Codable, Hashable, CaseIterable {
+enum TestingType: String, Codable, Hashable, CaseIterable, Identifiable {
     case unit, integration, e2e, performance, security
+    
+    var id: Self { self }
 }
 
-enum BenchmarkCriteria: String, Codable, Hashable, CaseIterable {
+enum BenchmarkCriteria: String, Codable, Hashable, CaseIterable, Identifiable {
+    var id: Self { self }
     case latency, throughput, correctness, codeQuality, docCompleteness, apiCompliance
 } 
