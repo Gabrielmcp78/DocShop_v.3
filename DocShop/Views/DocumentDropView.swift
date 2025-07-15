@@ -47,7 +47,16 @@ struct DocumentDropView: View {
                     Label("Browse Files", systemImage: "folder")
                 }
                 .buttonStyle(.bordered)
-                .fileImporter(isPresented: $isImporting, allowedContentTypes: [.item], allowsMultipleSelection: false) { result in
+                .fileImporter(isPresented: $isImporting, allowedContentTypes: [
+                    .plainText,
+                    .markdown,
+                    .html,
+                    .pdf,
+                    UTType(filenameExtension: "md")!,
+                    UTType(filenameExtension: "txt")!,
+                    UTType(filenameExtension: "html")!,
+                    UTType(filenameExtension: "htm")!
+                ], allowsMultipleSelection: false) { result in
                     switch result {
                     case .success(let urls):
                         if let url = urls.first { selectedFile = url; importFromFile(url) }
@@ -69,7 +78,14 @@ struct DocumentDropView: View {
                         .foregroundColor(.secondary)
                         .font(.headline)
                 )
-                .onDrop(of: ["public.file-url"], isTargeted: nil) { providers in
+                .onDrop(of: [
+                    "public.file-url",
+                    "public.plain-text",
+                    "net.daringfireball.markdown",
+                    "public.html",
+                    "com.adobe.pdf",
+                    "public.data"
+                ], isTargeted: nil) { providers in
                     handleDrop(providers: providers)
                 }
 
@@ -161,8 +177,8 @@ struct DocumentDropView: View {
         importError = nil
         Task {
             do {
-                // Use DocumentProcessor for full processing pipeline including chunking and AI analysis
-                let meta = try await DocumentProcessor.shared.processDocument(url: url, importMethod: .manual)
+                // Use the new processLocalFile method for file imports
+                let meta = try await DocumentProcessor.shared.processLocalFile(at: url, importMethod: .manual)
                 let content = try? DocumentStorage.shared.loadDocument(at: URL(fileURLWithPath: meta.filePath))
                 await MainActor.run {
                     previewDocument = meta
@@ -171,8 +187,10 @@ struct DocumentDropView: View {
                     isProcessing = false
                 }
             } catch {
-                importError = error.localizedDescription
-                isProcessing = false
+                await MainActor.run {
+                    importError = error.localizedDescription
+                    isProcessing = false
+                }
             }
         }
     }

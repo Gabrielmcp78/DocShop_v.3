@@ -136,11 +136,6 @@ struct LibraryView: View {
             }
             .buttonStyle(.bordered)
             .help("Refresh Library")
-            Button(action: { showingTagEditor = true }) {
-                Image(systemName: "tag")
-            }
-            .buttonStyle(.bordered)
-            .help("Manage Tags")
         }
         .padding([.top, .horizontal])
     }

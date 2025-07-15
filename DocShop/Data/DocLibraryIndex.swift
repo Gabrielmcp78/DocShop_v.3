@@ -360,6 +360,31 @@ class DocLibraryIndex: ObservableObject {
         
         logger.info("Imported \(importedDocuments.count) documents from \(url.lastPathComponent)")
     }
+    
+    func clearAllDocuments() {
+        logger.info("Clearing all documents from library")
+        
+        // Delete all document files
+        for document in documents {
+            do {
+                try DocumentStorage.shared.deleteDocument(at: URL(fileURLWithPath: document.filePath))
+                logger.info("Deleted document file: \(document.title)")
+            } catch {
+                logger.warning("Failed to delete document file \(document.title): \(error)")
+            }
+        }
+        
+        // Clear the documents array
+        DispatchQueue.main.async {
+            self.documents.removeAll()
+            self.searchResults.removeAll()
+        }
+        
+        // Save empty library
+        saveDocuments()
+        
+        logger.info("Library cleared successfully")
+    }
 }
 
 enum LibraryError: LocalizedError {

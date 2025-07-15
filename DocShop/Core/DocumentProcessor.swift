@@ -119,6 +119,91 @@ class DocumentProcessor: ObservableObject {
         }
     }
     
+    func processLocalFile(at fileURL: URL, importMethod: ImportMethod = .manual) async throws -> DocumentMetaData {
+        await MainActor.run {
+            self.currentStatus = "Processing local file..."
+            self.processingProgress = 0.1
+        }
+        
+        // Validate file exists and is readable
+        guard FileManager.default.fileExists(atPath: fileURL.path) else {
+            throw DocumentError.invalidURL("File does not exist: \(fileURL.path)")
+        }
+        
+        guard fileURL.startAccessingSecurityScopedResource() else {
+            throw DocumentError.invalidURL("Cannot access file: \(fileURL.path)")
+        }
+        defer { fileURL.stopAccessingSecurityScopedResource() }
+        
+        await MainActor.run {
+            self.currentStatus = "Reading file content..."
+            self.processingProgress = 0.3
+        }
+        
+        let fileExtension = fileURL.pathExtension.lowercased()
+        let fileName = fileURL.lastPathComponent
+        
+        var content: String
+        var title: String = fileName
+        
+        switch fileExtension {
+        case "md", "markdown":
+            content = try String(contentsOf: fileURL, encoding: .utf8)
+            title = extractMarkdownTitle(from: content) ?? fileName
+            
+        case "txt":
+            content = try String(contentsOf: fileURL, encoding: .utf8)
+            title = fileName
+            
+        case "pdf":
+            // For now, just create a placeholder - PDF processing would need additional libraries
+            content = "# \(fileName)\n\nPDF file imported. Content extraction not yet implemented."
+            title = fileName
+            
+        case "html", "htm":
+            let htmlContent = try String(contentsOf: fileURL, encoding: .utf8)
+            let (extractedTitle, extractedContent, _) = try await parseHTMLEnhanced(data: htmlContent.data(using: .utf8) ?? Data(), url: fileURL)
+            title = extractedTitle
+            content = try await convertToMarkdown(html: extractedContent, title: extractedTitle, sourceURL: fileURL)
+            
+        default:
+            // Try to read as plain text
+            do {
+                content = try String(contentsOf: fileURL, encoding: .utf8)
+                title = fileName
+            } catch {
+                throw DocumentError.parsingError("Unsupported file type: \(fileExtension)")
+            }
+        }
+        
+        await MainActor.run {
+            self.currentStatus = "Saving document..."
+            self.processingProgress = 0.8
+        }
+        
+        // Create a fake HTTP response for compatibility
+        let response = HTTPURLResponse(url: fileURL, statusCode: 200, httpVersion: nil, headerFields: nil)!
+        
+        let document = try await saveDocument(
+            title: title,
+            content: content,
+            sourceURL: fileURL,
+            response: response,
+            extractedLinks: [],
+            importMethod: importMethod,
+            jsRenderingUsed: false
+        )
+        
+        await MainActor.run {
+            self.currentStatus = "Complete"
+            self.processingProgress = 1.0
+        }
+        
+        await resetStatusAfterDelay()
+        
+        return document
+    }
+    
     func processDocument(url: URL, importMethod: ImportMethod = .manual) async throws -> DocumentMetaData {
         await MainActor.run {
             self.currentStatus = "Validating URL..."
@@ -682,6 +767,17 @@ class DocumentProcessor: ObservableObject {
         library.addDocument(metadata)
         
         return metadata
+    }
+    
+    private func extractMarkdownTitle(from content: String) -> String? {
+        let lines = content.components(separatedBy: .newlines)
+        for line in lines {
+            let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
+            if trimmed.hasPrefix("# ") {
+                return String(trimmed.dropFirst(2)).trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+        }
+        return nil
     }
     
     private func updateTaskStatus(taskId: UUID, status: ProcessingStatus) async {

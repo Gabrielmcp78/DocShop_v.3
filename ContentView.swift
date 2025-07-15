@@ -47,7 +47,7 @@ struct ContentView: View {
     private func selectedDetailView(for item: SidebarItem?) -> some View {
         switch item {
         case .library:
-            LibraryView()
+            DocumentTableOfContentsView()
         case .importItem:
             DocumentDropView()
         case .settings:
