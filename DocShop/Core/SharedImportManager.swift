@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 import SwiftUI
 
 // This helper manages retrieving content sent from the Share Extension.

@@ -65,7 +65,7 @@ class SmartDocumentProcessor {
         }
         
         // Last resort - use body but remove ALL navigation
-        guard let body = doc.body() else {
+        guard let body = try doc.body() else {
             throw DocumentError.contentExtractionFailed("No content found")
         }
         
@@ -130,20 +130,22 @@ class SmartDocumentProcessor {
         // CONVERT REMAINING LINKS TO ACTUAL FUNCTIONAL LINKS
         let links = try element.select("a[href]")
         for link in links {
-            let href = try link.attr("href")
+            let href = try? link.attr("href")
             let linkText = try link.text()
             
-            if href.hasPrefix("#") {
-                // Internal navigation link - make it functional
-                try link.html("🔗 \(linkText)")
-                try link.attr("data-internal", "true")
-            } else if !href.hasPrefix("http") && !href.isEmpty {
-                // Relative link - mark for potential crawling
-                try link.html("📄 \(linkText) → \(href)")
-                try link.attr("data-relative", "true")
-            } else if href.hasPrefix("http") {
-                // External link - mark clearly
-                try link.html("🌐 \(linkText)")
+            if let href = href {
+                if href.hasPrefix("#") {
+                    // Internal navigation link - make it functional
+                    try link.html("🔗 \(linkText)")
+                    try link.attr("data-internal", "true")
+                } else if !href.hasPrefix("http") && !href.isEmpty {
+                    // Relative link - mark for potential crawling
+                    try link.html("📄 \(linkText) → \(href)")
+                    try link.attr("data-relative", "true")
+                } else if href.hasPrefix("http") {
+                    // External link - mark clearly
+                    try link.html("🌐 \(linkText)")
+                }
             }
         }
     }
@@ -159,7 +161,7 @@ class SmartDocumentProcessor {
             text.contains("npm install") && text.contains("global") ||
             text.contains("brew install") ||
             text.contains("apt-get install") ||
-            text.contains("rm -rf") && text.contains("$HOME") ||
+            text.contains("rm -rf") && text.contains("$home") ||
             text.contains("echo") && text.contains(">>") && text.contains("bashrc")
         ) {
             return true
@@ -183,61 +185,63 @@ class SmartDocumentProcessor {
     private func buildDocumentStructure(from element: Element, sourceURL: URL) throws -> DocumentStructure {
         let title = try extractDocumentTitle(from: element, sourceURL: sourceURL)
         var sections: [DocumentSection] = []
-        
-        // Extract headings and build structure
-        let headings = try element.select("h1, h2, h3, h4, h5, h6")
         var currentSection: DocumentSection?
         var sectionContent = ""
         
-        for heading in headings {
-            let level = Int(heading.tagName().dropFirst()) ?? 1
-            let headingText = try heading.text().trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // Skip if it's the main title or empty
-            if headingText.isEmpty || headingText.lowercased() == title.lowercased() {
-                continue
-            }
-            
-            // Save previous section if exists
-            if let current = currentSection {
-                sections.append(DocumentSection(
-                    title: current.title,
-                    level: current.level,
-                    anchor: current.anchor,
-                    content: sectionContent.trimmingCharacters(in: .whitespacesAndNewlines)
-                ))
-            }
-            
-            // Start new section
-            let anchor = createAnchor(from: headingText)
-            currentSection = DocumentSection(
-                title: headingText,
-                level: level,
-                anchor: anchor,
-                content: ""
-            )
-            sectionContent = ""
-            
-            // Extract content for this section
-            var nextElement = try heading.nextElementSibling()
-            while let element = nextElement {
-                let tagName = element.tagName().lowercased()
+        // Extract headings and build structure
+        if let headings = try? element.select("h1, h2, h3, h4, h5, h6") {
+            for heading in headings {
+                let level = Int(String(heading.tagName().dropFirst())) ?? 1
+                let headingText = try heading.text().trimmingCharacters(
+                    in: .whitespacesAndNewlines
+                )
                 
-                // Stop if we hit another heading of same or higher level
-                if tagName.hasPrefix("h") {
-                    let nextLevel = Int(tagName.dropFirst()) ?? 6
-                    if nextLevel <= level {
-                        break
+                // Skip if it's the main title or empty
+                if headingText.isEmpty || headingText.lowercased() == title.lowercased() {
+                    continue
+                }
+                
+                // Save previous section if exists
+                if let current = currentSection {
+                    sections.append(DocumentSection(
+                        title: current.title,
+                        level: current.level,
+                        anchor: current.anchor,
+                        content: sectionContent.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                    ))
+                }
+                
+                // Start new section
+                let anchor = createAnchor(from: headingText)
+                currentSection = DocumentSection(
+                    title: headingText,
+                    level: level,
+                    anchor: anchor,
+                    content: ""
+                )
+                sectionContent = ""
+                
+                // Extract content for this section
+                var nextElement = try heading.nextElementSibling()
+                while let element = nextElement {
+                    let tagName = element.tagName().lowercased()
+                    
+                    // Stop if we hit another heading of same or higher level
+                    if tagName.hasPrefix("h") {
+                        let nextLevel = Int(String(tagName.dropFirst())) ?? 6
+                        if nextLevel <= level {
+                            break
+                        }
                     }
+                    
+                    // Add content
+                    let elementText = try element.text()
+                    if !elementText.isEmpty {
+                        sectionContent += elementText + "\n\n"
+                    }
+                    
+                    nextElement = try element.nextElementSibling()
                 }
-                
-                // Add content
-                let elementText = try element.text()
-                if !elementText.isEmpty {
-                    sectionContent += elementText + "\n\n"
-                }
-                
-                nextElement = try element.nextElementSibling()
             }
         }
         
@@ -247,7 +251,7 @@ class SmartDocumentProcessor {
                 title: current.title,
                 level: current.level,
                 anchor: current.anchor,
-                content: sectionContent.trimmingCharacters(in: .whitespacesAndNewlines)
+                content: sectionContent.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             ))
         }
         
@@ -261,7 +265,9 @@ class SmartDocumentProcessor {
     private func extractDocumentTitle(from element: Element, sourceURL: URL) throws -> String {
         // Try to find the main title
         if let h1 = try element.select("h1").first() {
-            let title = try h1.text().trimmingCharacters(in: .whitespacesAndNewlines)
+            let title = try h1.text().trimmingCharacters(
+                in: .whitespacesAndNewlines
+            )
             if !title.isEmpty {
                 return title
             }
@@ -302,58 +308,70 @@ class SmartDocumentProcessor {
         }
         
         // REMOVE LISTS THAT ARE JUST NAVIGATION MENUS
-        let lists = try element.select("ul, ol")
-        for list in lists {
-            let listItems = try list.select("li")
-            let links = try list.select("a")
-            
-            // If it's mostly links with short text, it's probably a menu
-            if links.count > 2 && Double(links.count) / Double(listItems.count) > 0.7 {
-                var totalLinkTextLength = 0
-                for link in links {
-                    totalLinkTextLength += try link.text().count
+        if let lists = try? element.select("ul, ol") {
+            for list in lists {
+                guard let listItems = try? list.select("li"), let links = try? list.select("a") else {
+                    continue
                 }
-                
-                let averageLinkLength = totalLinkTextLength / links.count
-                
-                // If average link text is short (< 30 chars), it's probably navigation
-                if averageLinkLength < 30 {
-                    try list.remove()
+                if listItems.count == 0 {
+                    continue
+                }
+                // If it's mostly links with short text, it's probably a menu
+                if links.count > 2 && Double(links.count) / Double(listItems.count) > 0.7 {
+                    var totalLinkTextLength = 0
+                    for link in links {
+                        totalLinkTextLength += (try? link.text().count) ?? 0
+                    }
+                    
+                    let averageLinkLength = totalLinkTextLength / max(links.count, 1)
+                    
+                    // If average link text is short (< 30 chars), it's probably navigation
+                    if averageLinkLength < 30 {
+                        try list.remove()
+                    }
                 }
             }
         }
         
         // REMOVE ELEMENTS THAT ARE JUST REPETITIVE NAVIGATION
-        let allElements = try element.select("*")
-        for elem in allElements {
-            let text = try elem.ownText()
-            let className = try elem.className()
-            
-            // Remove elements with navigation-related class names
-            if className.lowercased().contains("nav") || 
-               className.lowercased().contains("menu") ||
-               className.lowercased().contains("sidebar") ||
-               className.lowercased().contains("toc") {
-                try elem.remove()
-            }
-            
-            // Remove elements that are just single words (likely navigation)
-            if text.count > 0 && text.count < 20 && !text.contains(" ") {
-                let parent = elem.parent()
-                if parent != nil && try parent!.children().count > 5 {
-                    // If parent has many similar short elements, remove this one
+        if let allElements = try? element.select("*") {
+            for elem in allElements {
+                let text = elem.ownText()
+                let classNameOpt = try? elem.className()
+                let className = classNameOpt?.lowercased() ?? ""
+                
+                // Remove elements with navigation-related class names
+                if className.contains("nav") || className.contains("menu") || className.contains("sidebar") {
                     try elem.remove()
+                    continue
+                }
+                
+                // Remove elements that are just single words (likely navigation)
+                if text.count > 0 && text.count < 20 && !text.contains(" ") {
+                    if let parent = elem.parent(), parent.children().count > 5 {
+                        // If parent has many similar short elements, remove this one
+                        try elem.remove()
+                    }
                 }
             }
         }
         
         // KEEP ONLY PARAGRAPHS, HEADINGS, AND MEANINGFUL CONTENT
-        let contentElements = try element.select("p, h1, h2, h3, h4, h5, h6, blockquote, pre, code")
-        let allText = contentElements.map { try? $0.text() }.compactMap { $0 }.joined(separator: " ")
-        
-        // If we don't have enough meaningful content, this might be a navigation page
-        if allText.count < 200 {
-            throw DocumentError.contentExtractionFailed("Page appears to be mostly navigation, not content")
+        if let contentElements = try? element.select(
+            "p, h1, h2, h3, h4, h5, h6, blockquote, pre, code"
+        ) {
+            var allText = ""
+            for element in contentElements {
+                if let text = try? element.text() {
+                    allText += text + " "
+                }
+            }
+            allText = allText.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // If we don't have enough meaningful content, this might be a navigation page
+            if allText.count < 200 {
+                throw DocumentError.contentExtractionFailed("Page appears to be mostly navigation, not content")
+            }
         }
     }
     

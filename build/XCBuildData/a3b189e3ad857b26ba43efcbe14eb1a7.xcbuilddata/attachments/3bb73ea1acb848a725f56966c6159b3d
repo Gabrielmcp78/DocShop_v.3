@@ -1,0 +1,4 @@
+module HummingbirdHTTP2 {
+header "HummingbirdHTTP2-Swift.h"
+export *
+}

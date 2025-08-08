@@ -181,20 +181,13 @@ struct ImprovedProjectCreationView: View {
 
         Task {
             isCreatingProject = true
-            do {
-                _ = await AgentOrchestrator.shared.createProject(
-                    from: [], // Will be populated from library selection
-                    requirements: requirements
-                )
-                await MainActor.run {
-                    isPresented = false
-                }
-            } catch {
-                await MainActor.run {
-                    creationError = error
-                    showErrorAlert = true
-                    isCreatingProject = false
-                }
+            _ = await AgentOrchestrator.shared.createProject(
+                from: [], // Will be populated from library selection
+                requirements: requirements
+            )
+            await MainActor.run {
+                isPresented = false
+                isCreatingProject = false
             }
         }
     }
@@ -408,7 +401,7 @@ struct AIProjectConsultationView: View {
         
         // Simulate AI analysis
         Task {
-            await Task.sleep(2_000_000_000) // 2 seconds
+            try? await Task.sleep(nanoseconds: 2_000_000_000) // 2 seconds
             
             // Generate mock recommendations based on project description
             let mockRecommendations = generateMockRecommendations()
@@ -425,10 +418,10 @@ struct AIProjectConsultationView: View {
         let description = projectDescription.lowercased()
         
         var languages: [ProgrammingLanguage] = []
-        var features: [SDKFeature] = [.authentication, .errorHandling]
-        var docs: [DocumentationType] = [.apiReference, .gettingStarted]
-        var tests: [TestingType] = [.unit]
-        var benchmarks: [BenchmarkCriteria] = [.correctness]
+        let features: [SDKFeature] = [.authentication, .errorHandling]
+        let docs: [DocumentationType] = [.apiReference, .gettingStarted]
+        let tests: [TestingType] = [.unit]
+        let benchmarks: [BenchmarkCriteria] = [.correctness]
         
         // Simple keyword-based recommendations
         if description.contains("ios") || description.contains("swift") || description.contains("apple") {

@@ -1,0 +1,4 @@
+module HummingbirdTLS {
+header "HummingbirdTLS-Swift.h"
+export *
+}

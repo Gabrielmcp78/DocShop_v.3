@@ -67,18 +67,12 @@ struct ProjectCreationView: View {
 
                         Task {
                             isCreatingProject = true
-                            do {
-                                _ = try await AgentOrchestrator.shared.createProject(
-                                    from: [], // Will be populated from library selection
-                                    requirements: requirements
-                                )
-                                // On success, dismiss the view
-                                isPresented = false
-                            } catch {
-                                // On failure, prepare and show an alert
-                                creationError = error
-                                showErrorAlert = true
-                            }
+                            _ = await AgentOrchestrator.shared.createProject(
+                                from: [],
+                                requirements: requirements
+                            )
+                            // On success, dismiss the view
+                            isPresented = false
                             isCreatingProject = false
                         }
                     }.disabled(name.isEmpty)

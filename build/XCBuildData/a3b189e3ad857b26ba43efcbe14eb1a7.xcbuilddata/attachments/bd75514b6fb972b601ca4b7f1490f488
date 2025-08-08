@@ -1,0 +1,4 @@
+module CNIODarwin {
+umbrella header "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio/Sources/CNIODarwin/include/CNIODarwin.h"
+export *
+}

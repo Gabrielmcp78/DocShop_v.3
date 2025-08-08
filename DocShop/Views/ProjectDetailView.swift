@@ -13,14 +13,15 @@ struct ProjectDetailView: View {
         name: "Sample Project",
         description: "A demo project for preview.",
         requirements: ProjectRequirements(
-            targetLanguages: [.swift],
-            sdkFeatures: [.authentication],
-            documentationRequirements: [.apiReference],
-            testingRequirements: [.unit],
-            performanceBenchmarks: [.latency],
+            targetLanguages: [ProgrammingLanguage.swift],
+            sdkFeatures: [SDKFeature.authentication],
+            documentationRequirements: [DocumentationType.apiReference],
+            testingRequirements: [TestingType.unit],
+            performanceBenchmarks: [BenchmarkCriteria.latency],
             projectName: "Sample Project",
             projectDescription: "A demo project for preview."
         ),
         documents: []
     ))
 } 
+

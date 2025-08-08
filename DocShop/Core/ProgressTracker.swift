@@ -17,9 +17,9 @@ class ProgressTracker: ObservableObject {
         // TODO: Add dependency/bottleneck/estimate analysis as needed
     }
     
-    func validateBenchmarks(for task: ProjectTask) async -> BenchmarkResult {
+    func validateBenchmarks(for task: ProjectTask) async throws -> BenchmarkResult {
         // Simulate running performance, code quality, doc completeness, API compliance checks
-        await Task.sleep(500_000_000) // 0.5s
+        try await Task.sleep(nanoseconds: 500_000_000) // 0.5s
         let result = BenchmarkResult(taskID: task.id, passed: true, details: "All checks passed.")
         DispatchQueue.main.async {
             self.benchmarks[task.id] = result
@@ -27,9 +27,9 @@ class ProgressTracker: ObservableObject {
         return result
     }
     
-    func detectAgentDrift(_ agent: DevelopmentAgent) async -> DriftDetectionResult {
+    func detectAgentDrift(_ agent: DevelopmentAgent) async throws -> DriftDetectionResult {
         // Simulate drift detection (e.g., compare agent output to context/goals)
-        await Task.sleep(300_000_000) // 0.3s
+        try await Task.sleep(nanoseconds: 300_000_000) // 0.3s
         let drift = Bool.random()
         let details = drift ? "Agent output diverged from project context." : "No drift detected."
         return DriftDetectionResult(isDrifting: drift, details: details)
@@ -56,4 +56,3 @@ struct BenchmarkResult: Codable, Equatable, Hashable {
     let passed: Bool
     let details: String
 } 
-

@@ -4,15 +4,11 @@ import Foundation
 func registerExampleLocalAgent() {
     let context = AgentContext(
         agentID: UUID(),
+        agentType: .sdk,
+        capabilities: [.codeGeneration, .documentation],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.swift],
-            sdkFeatures: [.authentication],
-            documentationRequirements: [.apiReference],
-            testingRequirements: [.unit],
-            performanceBenchmarks: []
-        )
+        projectContext: nil,
+        relevantDocs: []
     )
     let agent = LocalAgent(
         id: context.agentID,
@@ -28,15 +24,11 @@ func registerExampleLocalAgent() {
 func registerExampleRemoteAgent() {
     let context = AgentContext(
         agentID: UUID(),
+        agentType: .sdk,
+        capabilities: [.codeGeneration, .testing],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.python],
-            sdkFeatures: [.authentication],
-            documentationRequirements: [.apiReference],
-            testingRequirements: [.integration],
-            performanceBenchmarks: []
-        )
+        projectContext: nil,
+        relevantDocs: []
     )
     let endpoint = URL(string: "https://agent-cloud.example.com/execute")!
     let agent = RemoteAgent(

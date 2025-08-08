@@ -255,6 +255,7 @@ class AIDocumentAnalyzer: ObservableObject {
 
 // MARK: - AI Data Models
 
+@available(macOS 26.0, *)
 @Generable(description: "Analysis of a technical document including quality assessment and categorization")
 struct DocumentAnalysis {
     @Guide(description: "An improved, descriptive title for the document")
@@ -276,18 +277,21 @@ struct DocumentAnalysis {
     var valueAssessment: String
 }
 
+@available(macOS 26.0, *)
 @Generable(description: "Search suggestions for finding related documentation")
 struct SearchSuggestions {
     @Guide(description: "5 relevant search suggestions that would help find related documentation")
     var suggestions: [String]
 }
 
+@available(macOS 26.0, *)
 @Generable(description: "Analysis of link relevance for documentation archiving")
 struct LinkRelevanceAnalysis {
     @Guide(description: "Links that are most relevant for documentation archiving")
     var relevantLinks: [RelevantLink]
 }
 
+@available(macOS 26.0, *)
 @Generable(description: "A relevant link with explanation of its value")
 struct RelevantLink {
     @Guide(description: "The URL of the relevant link")
@@ -300,6 +304,7 @@ struct RelevantLink {
     var priority: Int
 }
 
+@available(macOS 26.0, *)
 @Generable(description: "Enhanced metadata for a document")
 struct MetadataEnhancement {
     @Guide(description: "An improved, more descriptive title")

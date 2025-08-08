@@ -1,0 +1,21 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/ConcurrencyHelpers-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ConcurrencyHelpers/Lock.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/Lock.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/Lock.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/Lock.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ConcurrencyHelpers/LockedValueBox.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/LockedValueBox.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/LockedValueBox.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ConcurrencyHelpers.build/Objects-normal/arm64/LockedValueBox.o"
+  }
+}

@@ -1,0 +1,46 @@
+Component,Type,Status,Dependencies,UI Integration,Data Flow,Missing Pieces
+DocShopApp.swift,Entry Point,✅ Working,SwiftUI,✅ Complete,App Launch,None
+ContentView.swift,Main UI,✅ Working,NavigationSplitView,✅ Complete,UI Navigation,None
+DocumentMetaData.swift,Data Model,✅ Working,Foundation,✅ Complete,Document Storage,None
+DocumentProcessor.swift,Core Logic,⚠️ Partial,SwiftSoup + FoundationModels,✅ Complete,Document Import,AI Integration
+DocumentStorage.swift,Data Layer,✅ Working,FileManager,✅ Complete,File Operations,None
+DocLibraryIndex.swift,Data Management,✅ Working,ObservableObject,✅ Complete,Document Indexing,None
+LibraryView.swift,UI Component,✅ Working,SwiftUI,✅ Complete,Document Display,None
+DocumentDropView.swift,UI Component,✅ Working,SwiftUI + UniformTypeIdentifiers,✅ Complete,Document Import,None
+DocumentDetailView.swift,UI Component,✅ Working,SwiftUI,✅ Complete,Document Viewing,None
+DocumentTableOfContentsView.swift,UI Component,✅ Working,SwiftUI,✅ Complete,Document Navigation,None
+Project.swift,Data Model,✅ Working,Foundation,⚠️ Partial,Project Storage,Creation Workflow
+ProjectOrchestrationView.swift,UI Component,⚠️ Shell Only,SwiftUI,⚠️ Partial,Project Management,Backend Logic
+ProjectCreationView.swift,UI Component,❌ Non-functional,SwiftUI,❌ Broken,Project Creation,Complete Implementation
+ProjectDetailView.swift,UI Component,⚠️ Shell Only,SwiftUI,⚠️ Partial,Project Display,Data Binding
+AgentTypes.swift,Data Model,✅ Working,Foundation,❌ No UI,Agent Definition,UI Integration
+AgentRegistry.swift,Core Logic,⚠️ Partial,ObservableObject,❌ No UI,Agent Management,Execution Logic
+AgentOrchestrator.swift,Core Logic,❌ Non-functional,Combine,❌ No UI,Agent Coordination,Complete Implementation
+LocalAgent.swift,Agent Implementation,❌ Non-functional,Foundation,❌ No UI,Agent Execution,AI Integration
+RemoteAgent.swift,Agent Implementation,❌ Non-functional,Foundation,❌ No UI,Agent Communication,Network Layer
+GeminiAPI.swift,AI Integration,❌ Non-functional,Foundation,❌ No UI,AI Communication,API Integration
+Neo4jManager.swift,Knowledge Graph,❌ Non-functional,Foundation,❌ No UI,Graph Operations,Database Connection
+DocumentChunker.swift,Text Processing,❌ Non-functional,Foundation,❌ No UI,Content Processing,Implementation
+SDKGenerator.swift,Core Feature,❌ Non-functional,Foundation,❌ No UI,Code Generation,Complete Implementation
+TaskDistributor.swift,Task Management,❌ Non-functional,Foundation,❌ No UI,Task Assignment,Complete Implementation
+SystemValidator.swift,System Health,⚠️ Partial,Foundation,⚠️ Partial,Health Monitoring,UI Integration
+SecurityManager.swift,Security,⚠️ Partial,Foundation,❌ No UI,Security Validation,Complete Implementation
+MemoryManager.swift,Resource Management,❌ Non-functional,Foundation,❌ No UI,Memory Optimization,Implementation
+DocumentLogger.swift,Logging,✅ Working,Foundation,⚠️ Partial,Log Management,None
+LogViewerView.swift,UI Component,✅ Working,SwiftUI,✅ Complete,Log Display,None
+SystemStatusView.swift,UI Component,⚠️ Partial,SwiftUI,⚠️ Partial,System Monitoring,Data Binding
+EnhancedSettingsView.swift,UI Component,✅ Working,SwiftUI,✅ Complete,Configuration,None
+APIKeyInputView.swift,UI Component,⚠️ Partial,SwiftUI,⚠️ Partial,API Configuration,Validation Logic
+IngestedDocument.swift,Data Model,⚠️ Partial,Foundation,❌ No UI,Document Processing,Type Conflicts
+DocumentRelationship.swift,Data Model,✅ Working,Foundation,❌ No UI,Document Linking,UI Integration
+ValidationResult.swift,Data Model,⚠️ Conflicts,Foundation,❌ No UI,Validation Results,Type Resolution
+JavaScriptRenderer.swift,Web Processing,❌ Non-functional,WebKit,❌ No UI,JS Rendering,Implementation
+KeychainHelper.swift,Security,⚠️ Partial,Security Framework,❌ No UI,Credential Storage,Integration
+ProgressTracker.swift,UI Utility,⚠️ Partial,Foundation,⚠️ Partial,Progress Display,Implementation
+SmartDocumentProcessor.swift,AI Processing,❌ Non-functional,Foundation,❌ No UI,Smart Processing,AI Integration
+SmartDuplicateHandler.swift,Deduplication,⚠️ Partial,Foundation,⚠️ Partial,Duplicate Management,Logic Completion
+ContextManager.swift,Context Management,❌ Non-functional,Foundation,❌ No UI,Context Tracking,Implementation
+DocumentSearchIndex.swift,Search,❌ Non-functional,Foundation,❌ No UI,Search Operations,Implementation
+AIDocumentAnalyzer.swift,AI Analysis,❌ Non-functional,Foundation,❌ No UI,Document Analysis,AI Integration
+AppleDocsSpecialist.swift,Specialized Agent,❌ Non-functional,Foundation,❌ No UI,Apple Doc Processing,Implementation
+DevelopmentAgent.swift,Agent Type,❌ Non-functional,Foundation,❌ No UI,Development Tasks,Implementation

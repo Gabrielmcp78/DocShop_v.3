@@ -293,27 +293,27 @@ struct ImprovedDocumentDetailView: View {
         }
     }
     
-    private func extractHeadings(from content: String) -> [DocumentHeading] {
+    private func extractHeadings(from content: String) -> [SimpleDocumentHeading] {
         let lines = content.components(separatedBy: .newlines)
-        var headings: [DocumentHeading] = []
+        var headings: [SimpleDocumentHeading] = []
         
         for (index, line) in lines.enumerated() {
             let trimmed = line.trimmingCharacters(in: .whitespaces)
             
             if trimmed.hasPrefix("# ") {
-                headings.append(DocumentHeading(
+                headings.append(SimpleDocumentHeading(
                     id: index,
                     level: 1,
                     title: String(trimmed.dropFirst(2))
                 ))
             } else if trimmed.hasPrefix("## ") {
-                headings.append(DocumentHeading(
+                headings.append(SimpleDocumentHeading(
                     id: index,
                     level: 2,
                     title: String(trimmed.dropFirst(3))
                 ))
             } else if trimmed.hasPrefix("### ") {
-                headings.append(DocumentHeading(
+                headings.append(SimpleDocumentHeading(
                     id: index,
                     level: 3,
                     title: String(trimmed.dropFirst(4))
@@ -556,7 +556,7 @@ struct ContentElement {
     }
 }
 
-struct DocumentHeading {
+struct SimpleDocumentHeading {
     let id: Int
     let level: Int
     let title: String

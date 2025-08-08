@@ -61,7 +61,7 @@ class DevelopmentAgent: ObservableObject, Identifiable {
     }
     
     func searchCode(path: String, pattern: String) async throws -> String {
-        let arguments = [
+        _ = [
             "path": path,
             "pattern": pattern
         ]
@@ -75,8 +75,8 @@ class DevelopmentAgent: ObservableObject, Identifiable {
     
     func extractAPISpecificationsFromSearchResult(searchResult: String) -> APISpecification? {
         var endpoints: [APIEndpoint] = []
-        var dataModels: [APIDataModel] = []
-        var authMethods: [String] = []
+        let dataModels: [APIDataModel] = []
+        let authMethods: [String] = []
         
         // Regular expression to find paths and methods
         let pathRegex = try? NSRegularExpression(pattern: "\"paths\":\\s*\\{(.*?)\\}", options: .dotMatchesLineSeparators)

@@ -1,0 +1,21 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextModule-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/Sources/ServiceContextModule/ServiceContext.swift" : {
+    "index-unit-output-path" : "/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContext.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContext.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContext.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/Sources/ServiceContextModule/ServiceContextKey.swift" : {
+    "index-unit-output-path" : "/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextKey.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextKey.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-context/build/swift-service-context.build/Release/ServiceContextModule.build/Objects-normal/arm64/ServiceContextKey.o"
+  }
+}

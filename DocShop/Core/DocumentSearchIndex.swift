@@ -44,7 +44,7 @@ class DocumentSearchIndex: ObservableObject {
             indexProgress = 0.0
         }
         
-        await indexQueue.async { [weak self] in
+        indexQueue.async { [weak self] in
             guard let self = self else { return }
             
             self.clearIndex()

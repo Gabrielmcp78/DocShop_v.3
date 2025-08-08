@@ -211,8 +211,12 @@ struct LibraryView: View {
                 List(selection: $selectedDocument) {
                     ForEach(filteredDocuments, id: \.id) { document in
                         EnhancedDocumentRowView(document: document) {
-                            withAnimation(.easeInOut(duration: 0.5)) { selectedDocument = document }
-                            var updatedDoc = document; updatedDoc.recordAccess(); library.updateDocument(updatedDoc)
+                            withAnimation(.easeInOut(duration: 0.5)) { 
+                                selectedDocument = document 
+                            }
+                            var updatedDoc = document
+                            updatedDoc.recordAccess()
+                            library.updateDocument(updatedDoc)
                         }
                         .tag(document)
                     }

@@ -1,7 +1,6 @@
 import Hummingbird
 import Foundation // Added for Process, URL, Pipe
 import NIOCore // Added for ByteBufferAllocator
-import HummingbirdHTTP // Added for Abort
 
 struct ShellAPI {
     static func addRoutes(to group: RouterGroup<CustomRequestContext>) {
@@ -50,3 +49,4 @@ struct ShellAPI {
         return ExecuteResponse(stdout: stdout, stderr: stderr, exitCode: process.terminationStatus)
     }
 }
+

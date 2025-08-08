@@ -1,3 +1,24 @@
+enum ValidationSeverity {
+    case passed
+    case warning
+    case error
+
+    var displayName: String {
+        switch self {
+        case .passed: return "Passed"
+        case .warning: return "Warning"
+        case .error: return "Error"
+        }
+    }
+
+    var color: String {
+        switch self {
+        case .passed: return "green"
+        case .warning: return "orange"
+        case .error: return "red"
+        }
+    }
+}
 import Foundation
 
 class SystemValidator {
@@ -7,7 +28,7 @@ class SystemValidator {
     
     private init() {}
     
-    func performSystemValidation() async -> ValidationResult {
+    func performSystemValidation() async -> SystemValidationResult {
         var issues: [ValidationIssue] = []
         var warnings: [ValidationIssue] = []
         
@@ -45,7 +66,7 @@ class SystemValidator {
             severity = .passed
         }
         
-        return ValidationResult(
+        return SystemValidationResult(
             severity: severity,
             issues: issues,
             warnings: warnings,
@@ -363,7 +384,7 @@ class SystemValidator {
     }
 }
 
-struct ValidationResult {
+struct SystemValidationResult {
     let severity: ValidationSeverity
     let issues: [ValidationIssue]
     let warnings: [ValidationIssue]
@@ -384,33 +405,6 @@ struct ValidationIssue {
     let details: String
 }
 
-enum ValidationSeverity {
-    case passed
-    case warning
-    case error
-    
-    var displayName: String {
-        switch self {
-        case .passed:
-            return "Passed"
-        case .warning:
-            return "Warning"
-        case .error:
-            return "Error"
-        }
-    }
-    
-    var color: String {
-        switch self {
-        case .passed:
-            return "green"
-        case .warning:
-            return "orange"
-        case .error:
-            return "red"
-        }
-    }
-}
 
 enum ValidationType {
     case fileSystem

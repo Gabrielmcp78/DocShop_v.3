@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434A63F22E4390990060BB96 /* Info 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 434A63F12E4390990060BB96 /* Info 2.plist */; };
 		434FB8EB2E22D75900AA4B57 /* FoundationModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FB8EA2E22D75900AA4B57 /* FoundationModels.framework */; };
 		434FB8ED2E22D7A300AA4B57 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434FB8EC2E22D7A300AA4B57 /* SwiftUI.framework */; };
 		437444E52E107EEB0063FED6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 437444E42E107EEB0063FED6 /* SwiftSoup */; };
 		439363D12E23DC4300A8CD47 /* VisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 439363D02E23DC4300A8CD47 /* VisualEffects */; };
+		43A00DDF2E438E9D00399552 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43A00DDE2E438E9D00399552 /* Info.plist */; };
 		43F6CB5F2E24948F00B4E0C5 /* Hummingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB5E2E24948F00B4E0C5 /* Hummingbird */; };
 		43F6CB612E24948F00B4E0C5 /* HummingbirdCore in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB602E24948F00B4E0C5 /* HummingbirdCore */; };
 		43F6CB632E24948F00B4E0C5 /* HummingbirdHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = 43F6CB622E24948F00B4E0C5 /* HummingbirdHTTP2 */; };
@@ -24,6 +26,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		431F69AD2E447D0200678C5B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4320058F2E44056D0065B81B /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F6CB7E2E24A50C00B4E0C5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,9 +58,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		432005942E4407C00065B81B /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
 		4345A80F2E0FF5FA002D6A3F /* DocShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		434A63F12E4390990060BB96 /* Info 2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info 2.plist"; sourceTree = "<group>"; };
 		434FB8EA2E22D75900AA4B57 /* FoundationModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoundationModels.framework; path = System/Library/Frameworks/FoundationModels.framework; sourceTree = SDKROOT; };
 		434FB8EC2E22D7A300AA4B57 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		43A00DDE2E438E9D00399552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F6CB802E24A50C00B4E0C5 /* DocShopAPI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DocShopAPI; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,6 +77,9 @@
 				API/ShellAPI.swift,
 				Info_old.plist,
 				Info.plist,
+				Models/Tests/AgentContextTypesTests.swift,
+				Models/Tests/DocumentModelTests.swift,
+				Models/Tests/ProjectRelationshipTests.swift,
 			);
 			target = 4345A80E2E0FF5FA002D6A3F /* DocShop */;
 		};
@@ -74,6 +102,16 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		431F69A02E447D0200678C5B /* DocShopShareExtention */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DocShopShareExtention;
+			sourceTree = "<group>";
+		};
+		432005862E44056D0065B81B /* DocShopIntent */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DocShopIntent;
+			sourceTree = "<group>";
+		};
 		4345A8112E0FF5FA002D6A3F /* DocShop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -126,9 +164,13 @@
 			isa = PBXGroup;
 			children = (
 				43F6CB812E24A50C00B4E0C5 /* DocShopAPI */,
+				432005862E44056D0065B81B /* DocShopIntent */,
+				431F69A02E447D0200678C5B /* DocShopShareExtention */,
 				4345A8102E0FF5FA002D6A3F /* Products */,
 				4345A8112E0FF5FA002D6A3F /* DocShop */,
 				434FB8E92E22D75900AA4B57 /* Frameworks */,
+				43A00DDE2E438E9D00399552 /* Info.plist */,
+				434A63F12E4390990060BB96 /* Info 2.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +186,7 @@
 		434FB8E92E22D75900AA4B57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				432005942E4407C00065B81B /* AppIntents.framework */,
 				434FB8EC2E22D7A300AA4B57 /* SwiftUI.framework */,
 				434FB8EA2E22D75900AA4B57 /* FoundationModels.framework */,
 			);
@@ -160,6 +203,8 @@
 				4345A80B2E0FF5FA002D6A3F /* Sources */,
 				4345A80C2E0FF5FA002D6A3F /* Frameworks */,
 				4345A80D2E0FF5FA002D6A3F /* Resources */,
+				4320058F2E44056D0065B81B /* Embed ExtensionKit Extensions */,
+				431F69AD2E447D0200678C5B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -218,6 +263,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					4345A80E2E0FF5FA002D6A3F = {
 						CreatedOnToolsVersion = 26.0;
@@ -257,6 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A00DDF2E438E9D00399552 /* Info.plist in Resources */,
+				434A63F22E4390990060BB96 /* Info 2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +381,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -390,7 +438,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -404,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = DocShop/DocShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -413,15 +462,18 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocShop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DocShop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2025 DocShop. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 3;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.DocShop";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docshop.DocShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx26.0;
@@ -439,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = DocShop/DocShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -448,15 +501,18 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocShop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DocShop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2025 DocShop. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 3;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.DocShop";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docshop.DocShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx26.0;
@@ -474,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634L69Q622;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -487,6 +544,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634L69Q622;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;

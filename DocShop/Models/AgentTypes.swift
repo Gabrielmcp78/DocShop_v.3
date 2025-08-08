@@ -12,7 +12,7 @@ enum AgentStatus: String, Codable {
     case idle, assigned, working, blocked, completed, error
 }
 
-struct TaskResult: Codable {
+struct TaskResult: Codable, Equatable, Hashable {
     let success: Bool
     let output: String
     let error: String?

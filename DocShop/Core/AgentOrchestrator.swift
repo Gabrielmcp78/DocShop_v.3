@@ -17,8 +17,8 @@ class AgentOrchestrator: ObservableObject {
     
     private init() {
         Task {
-            projectQueue = await projectStorage.loadProjects()
-            // If loadProjects() is not async, remove 'await' here
+            let loadedProjects = await projectStorage.loadProjects()
+            await MainActor.run { self.projectQueue = loadedProjects }
         }
     }
     
@@ -77,10 +77,8 @@ class AgentOrchestrator: ObservableObject {
     func startProject(_ project: Project) async {
         guard let projectIndex = projectQueue.firstIndex(where: { $0.id == project.id }) else { return }
         
-        await MainActor.run {
-            self.projectQueue[projectIndex].status = .active
-            self.systemStatus = .running
-        }
+        self.projectQueue[projectIndex].status = .active
+        self.systemStatus = .running
         
         // Start executing tasks
         let activeTasks = project.tasks.filter { $0.status == .assigned || $0.status == .pending }
@@ -97,10 +95,8 @@ class AgentOrchestrator: ObservableObject {
     func pauseProject(_ project: Project) async {
         guard let projectIndex = projectQueue.firstIndex(where: { $0.id == project.id }) else { return }
         
-        await MainActor.run {
-            self.projectQueue[projectIndex].status = .paused
-            self.systemStatus = .paused
-        }
+        self.projectQueue[projectIndex].status = .paused
+        self.systemStatus = .paused
         
         projectStorage.saveProject(projectQueue[projectIndex])
     }
@@ -108,7 +104,7 @@ class AgentOrchestrator: ObservableObject {
     private func executeTask(_ task: ProjectTask, with agent: DevelopmentAgent) async {
         await agent.perform(task: task) { result in
             Task {
-                await self.updateStatus(for: task, to: result.success ? .completed : .error)
+                self.updateStatus(for: task, to: result.success ? .completed : .error)
             }
         }
     }

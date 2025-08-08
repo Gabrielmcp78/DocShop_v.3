@@ -1,0 +1,341 @@
+{
+  "" : {
+    "const-values" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary.d",
+    "diagnostics" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary.dia",
+    "emit-module-dependencies" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary-emit-module.dia",
+    "pch" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShop-primary.swiftdeps"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/API/CustomRequestContext.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/CustomRequestContext.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/CustomRequestContext.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/CustomRequestContext.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/App/ContentView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/App/DocShopApp.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShopApp.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShopApp.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocShopApp.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AIDocumentAnalyzer.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIDocumentAnalyzer.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIDocumentAnalyzer.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIDocumentAnalyzer.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AgentExecutor.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentExecutor.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentExecutor.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentExecutor.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AgentOrchestrator.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentOrchestrator.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentOrchestrator.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentOrchestrator.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AgentRegistry.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentRegistry.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentRegistry.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentRegistry.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AgentTemplates.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTemplates.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTemplates.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTemplates.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/AppleDocsSpecialist.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AppleDocsSpecialist.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AppleDocsSpecialist.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AppleDocsSpecialist.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/ContextManager.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContextManager.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContextManager.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ContextManager.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DevelopmentAgent.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DevelopmentAgent.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DevelopmentAgent.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DevelopmentAgent.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentChunker.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentChunker.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentChunker.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentChunker.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentIngestionManager.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentIngestionManager.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentIngestionManager.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentIngestionManager.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentLogger.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentLogger.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentLogger.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentLogger.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentProcessor.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessor.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessor.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessor.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentProcessorConfig.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessorConfig.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessorConfig.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentProcessorConfig.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/DocumentSearchIndex.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentSearchIndex.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentSearchIndex.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentSearchIndex.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/GeminiAPI.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeminiAPI.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeminiAPI.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeminiAPI.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/JavaScriptRenderer.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/JavaScriptRenderer.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/JavaScriptRenderer.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/JavaScriptRenderer.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/KeychainHelper.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/KeychainHelper.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/KeychainHelper.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/KeychainHelper.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/LocalAgent.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LocalAgent.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LocalAgent.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LocalAgent.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/MemoryManager.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MemoryManager.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MemoryManager.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MemoryManager.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/Neo4jManager.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Neo4jManager.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Neo4jManager.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Neo4jManager.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/ProgressTracker.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProgressTracker.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProgressTracker.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProgressTracker.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/RemoteAgent.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/RemoteAgent.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/RemoteAgent.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/RemoteAgent.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/SDKGenerator.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SDKGenerator.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SDKGenerator.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SDKGenerator.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/SecurityManager.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SecurityManager.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SecurityManager.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SecurityManager.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/SmartDocumentProcessor.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDocumentProcessor.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDocumentProcessor.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDocumentProcessor.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/SmartDuplicateHandler.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDuplicateHandler.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDuplicateHandler.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SmartDuplicateHandler.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/SystemValidator.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemValidator.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemValidator.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemValidator.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Core/TaskDistributor.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskDistributor.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskDistributor.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskDistributor.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Data/DocLibraryIndex.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocLibraryIndex.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocLibraryIndex.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocLibraryIndex.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Data/DocumentStorage.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentStorage.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentStorage.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentStorage.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Data/ProjectStorage.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectStorage.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectStorage.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectStorage.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/AgentContextTypes.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentContextTypes.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentContextTypes.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentContextTypes.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/AgentTypes.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTypes.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTypes.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentTypes.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/DocumentMetaData.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentMetaData.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentMetaData.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentMetaData.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/DocumentRelationship.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentRelationship.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentRelationship.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentRelationship.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/IngestedDocument.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/IngestedDocument.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/IngestedDocument.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/IngestedDocument.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Models/Project.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Project.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Project.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/Project.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/AIStatusIndicator.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIStatusIndicator.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIStatusIndicator.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AIStatusIndicator.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/APIKeyInputView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/APIKeyInputView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/APIKeyInputView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/APIKeyInputView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/AgentDashboardView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentDashboardView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentDashboardView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentDashboardView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/AgentPanelView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentPanelView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentPanelView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/AgentPanelView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/BulkDeleteView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/BulkDeleteView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/BulkDeleteView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/BulkDeleteView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/DocumentDetailView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDetailView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDetailView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDetailView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/DocumentDropView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDropView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDropView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentDropView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/DocumentOutlineView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentOutlineView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentOutlineView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentOutlineView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/DocumentTableOfContentsView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentTableOfContentsView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentTableOfContentsView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/DocumentTableOfContentsView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/EnhancedSettingsView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/EnhancedSettingsView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/EnhancedSettingsView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/EnhancedSettingsView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/GlassBackground.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GlassBackground.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GlassBackground.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GlassBackground.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ImprovedDocumentDetailView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedDocumentDetailView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedDocumentDetailView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedDocumentDetailView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ImprovedProjectCreationView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedProjectCreationView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedProjectCreationView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ImprovedProjectCreationView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/LibraryView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LibraryView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LibraryView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LibraryView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/LogViewerView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LogViewerView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LogViewerView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/LogViewerView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/MainPanelView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MainPanelView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MainPanelView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MainPanelView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/MarkdownViewerView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MarkdownViewerView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MarkdownViewerView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/MarkdownViewerView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ProjectCommandDashboardView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCommandDashboardView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCommandDashboardView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCommandDashboardView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ProjectCreationView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCreationView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCreationView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectCreationView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ProjectDetailView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectDetailView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectDetailView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectDetailView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ProjectListView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectListView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectListView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectListView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/ProjectOrchestrationView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectOrchestrationView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectOrchestrationView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/ProjectOrchestrationView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/SystemStatusView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemStatusView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemStatusView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/SystemStatusView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/TaskAssignmentPanelView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskAssignmentPanelView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskAssignmentPanelView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskAssignmentPanelView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/DocShop/Views/TaskQueueView.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskQueueView.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskQueueView.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/TaskQueueView.o"
+  },
+  "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Volumes/Ready500/DEVELOPMENT/DocShop_v.3/build/DocShop.build/Release/DocShop.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

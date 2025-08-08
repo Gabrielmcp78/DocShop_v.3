@@ -1,0 +1,21 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignals-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/UnixSignals/UnixSignal.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignal.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignal.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignal.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/UnixSignals/UnixSignalsSequence.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignalsSequence.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignalsSequence.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/UnixSignals.build/Objects-normal/x86_64/UnixSignalsSequence.o"
+  }
+}

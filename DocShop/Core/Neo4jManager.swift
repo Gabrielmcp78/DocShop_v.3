@@ -188,7 +188,10 @@ class Neo4jManager {
         Task {
             do {
                 // Execute cypher via MCP Neo4j server
-                let result = try await executeNeo4jCommand(cypher: cypher, parameters: params)
+                _ = try await executeNeo4jCommand(
+                    cypher: cypher,
+                    parameters: params
+                )
                 completion(.success(()))
             } catch {
                 completion(.failure(error))
@@ -211,7 +214,7 @@ class Neo4jManager {
     private func executeNeo4jCommand(cypher: String, parameters: [String: Any]) async throws {
         // This would be replaced with actual MCP server call
         // For now, we'll simulate the MCP call structure
-        let commandData: [String: Any] = [
+        let _: [String: Any] = [
             "cypher": cypher,
             "parameters": parameters
         ]
@@ -224,7 +227,7 @@ class Neo4jManager {
     private func executeNeo4jQuery(cypher: String, parameters: [String: Any]) async throws -> [[String: Any]] {
         // This would be replaced with actual MCP server call
         // For now, we'll simulate the MCP call structure
-        let queryData: [String: Any] = [
+        let _: [String: Any] = [
             "cypher": cypher,
             "parameters": parameters
         ]

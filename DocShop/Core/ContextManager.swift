@@ -31,6 +31,7 @@ class ContextManager: ObservableObject {
         // Simulate context alignment check (e.g., compare agent state to context)
         try await Task.sleep(nanoseconds: 200_000_000) // 0.2s
         let aligned = Bool.random()
-        return aligned ? .aligned : .drifting
+        return aligned ? .fullyAligned : .drifting
     }
 } 
+

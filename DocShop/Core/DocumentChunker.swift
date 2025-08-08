@@ -4,7 +4,7 @@ enum DocumentChunkType: String, Codable, CaseIterable {
     case paragraph, heading, codeBlock, table, image, list, section, unknown
 }
 
-struct DocumentChunk: Identifiable, Codable {
+struct DocumentChunk: Identifiable, Codable, Equatable, Hashable {
     let id: UUID
     let documentID: UUID
     let type: DocumentChunkType
@@ -92,3 +92,4 @@ class DocumentChunker {
         return chunks
     }
 } 
+

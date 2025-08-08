@@ -1,0 +1,26 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/NIOHTTPTypesHTTP1-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/Sources/NIOHTTPTypesHTTP1/HTTP1ToHTTPCodec.swift" : {
+    "index-unit-output-path" : "/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTP1ToHTTPCodec.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTP1ToHTTPCodec.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTP1ToHTTPCodec.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/Sources/NIOHTTPTypesHTTP1/HTTPToHTTP1Codec.swift" : {
+    "index-unit-output-path" : "/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPToHTTP1Codec.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPToHTTP1Codec.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPToHTTP1Codec.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/Sources/NIOHTTPTypesHTTP1/HTTPTypeConversion.swift" : {
+    "index-unit-output-path" : "/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPTypeConversion.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPTypeConversion.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-nio-extras/build/swift-nio-extras.build/Release/NIOHTTPTypesHTTP1.build/Objects-normal/x86_64/HTTPTypeConversion.o"
+  }
+}

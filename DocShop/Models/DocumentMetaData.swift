@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DocumentMetaData: Identifiable, Codable, Hashable {
+struct DocumentMetaData: Identifiable, Codable, Hashable, Equatable {
     let id: UUID
     var title: String
     let sourceURL: String
@@ -22,6 +22,28 @@ struct DocumentMetaData: Identifiable, Codable, Hashable {
     var accessCount: Int
     var contentType: DocumentContentType
     var language: String?
+    
+    // Enhanced metadata fields for improved categorization
+    var programmingLanguages: Set<String>? // Programming languages identified in the document
+    var frameworks: Set<String>? // Frameworks identified in the document
+    var companies: Set<String>? // Companies mentioned in the document
+    var categories: Set<String>? // General categories for the document
+    var complexity: DocumentComplexity? // Estimated complexity level
+    var audience: DocumentAudience? // Target audience
+    var documentVersion: String? // Version of the document itself
+    var apiVersion: String? // API version if applicable
+    var keywords: [String]? // Key terms extracted from the document
+    var readingTime: TimeInterval? // Estimated reading time in seconds
+    var wordCount: Int? // Number of words in the document
+    var pageCount: Int? // Number of pages if applicable
+    
+    // Document structure preservation
+    var headings: [DocumentHeading]? // Extracted headings for navigation
+    var codeBlocks: [CodeBlock]? // Extracted code blocks
+    var tableOfContents: [TOCEntry]? // Generated table of contents
+    var internalLinks: [InternalLink]? // Links within the document
+    
+    // Original fields
     var extractedLinks: [String]? // URLs of links found in this document
     var parentDocument: String? // URL of the document that led to this one
     var crawlDepth: Int? // Depth in the crawl hierarchy
@@ -29,6 +51,9 @@ struct DocumentMetaData: Identifiable, Codable, Hashable {
     var lastUpdateCheck: Date? // When we last checked for updates
     var contentHash: String? // Hash of content for change detection
     var wasRenderedWithJS: Bool // Whether JavaScript rendering was used
+    
+    // Extensibility support
+    var customAttributes: [String: String]? // Flexible key-value pairs for future extensions
     
     init(
         title: String,
@@ -141,6 +166,16 @@ struct DocumentMetaData: Identifiable, Codable, Hashable {
     }
 }
 
+extension DocumentMetaData {
+    static func == (lhs: DocumentMetaData, rhs: DocumentMetaData) -> Bool {
+        return lhs.id == rhs.id &&
+               lhs.sourceURL == rhs.sourceURL &&
+               lhs.filePath == rhs.filePath &&
+               lhs.dateImported == rhs.dateImported &&
+               lhs.contentHash == rhs.contentHash
+    }
+}
+
 enum DocumentContentType: String, Codable, CaseIterable {
     case markdown = "markdown"
     case html = "html"
@@ -199,4 +234,77 @@ enum ImportMethod: String, Codable, CaseIterable {
             return "JavaScript Rendering"
         }
     }
+}
+// New enums and structs for enhanced metadata
+
+enum DocumentComplexity: String, Codable, CaseIterable {
+    case beginner = "beginner"
+    case intermediate = "intermediate"
+    case advanced = "advanced"
+    case expert = "expert"
+    
+    var displayName: String {
+        switch self {
+        case .beginner:
+            return "Beginner"
+        case .intermediate:
+            return "Intermediate"
+        case .advanced:
+            return "Advanced"
+        case .expert:
+            return "Expert"
+        }
+    }
+}
+
+enum DocumentAudience: String, Codable, CaseIterable {
+    case developer = "developer"
+    case designer = "designer"
+    case manager = "manager"
+    case endUser = "endUser"
+    case general = "general"
+    
+    var displayName: String {
+        switch self {
+        case .developer:
+            return "Developer"
+        case .designer:
+            return "Designer"
+        case .manager:
+            return "Manager"
+        case .endUser:
+            return "End User"
+        case .general:
+            return "General"
+        }
+    }
+}
+
+
+// Document structure preservation models
+
+struct DocumentHeading: Codable, Hashable, Identifiable {
+    let id: UUID
+    let level: Int
+    let title: String
+    let anchor: String
+}
+
+struct CodeBlock: Codable, Hashable, Identifiable {
+    let id: UUID
+    let language: String
+    let code: String
+}
+
+struct TOCEntry: Codable, Hashable, Identifiable {
+    let id: UUID
+    let title: String
+    let level: Int
+    let anchor: String
+}
+
+struct InternalLink: Codable, Hashable, Identifiable {
+    let id: UUID
+    let target: String
+    let label: String
 }

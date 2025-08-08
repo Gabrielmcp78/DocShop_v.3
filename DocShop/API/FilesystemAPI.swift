@@ -1,7 +1,7 @@
 import Hummingbird
 import Foundation
 import NIOCore // Added for ByteBufferAllocator
-import HummingbirdHTTP // Added for Abort
+import Hummingbird // Added for Abort
 
 struct FilesystemAPI {
     static func addRoutes(to group: RouterGroup<CustomRequestContext>) {

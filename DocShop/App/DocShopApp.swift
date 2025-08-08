@@ -19,21 +19,22 @@ struct DocShopApp: App {
             }
         }
     }
+    
+    #if canImport(AppIntents)
+    static var appIntents: [Any] {
+        [ImportDocumentationIntent()]
+    }
+    #endif
 }
 
 func registerProductionAgents() {
     // Swift SDK Agent
     let swiftContext = AgentContext(
         agentID: UUID(),
+        agentType: .sdk,
+        capabilities: [.codeGeneration, .documentation, .testing],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.swift],
-            sdkFeatures: [.authentication, .errorHandling, .logging, .asyncSupport],
-            documentationRequirements: [.apiReference, .gettingStarted],
-            testingRequirements: [.unit, .integration],
-            performanceBenchmarks: [.latency, .correctness]
-        )
+        relevantDocs: []
     )
     let swiftAgent = LocalAgent(
         id: swiftContext.agentID,
@@ -47,15 +48,10 @@ func registerProductionAgents() {
     // Documentation Agent
     let docContext = AgentContext(
         agentID: UUID(),
+        agentType: .documentation,
+        capabilities: [.documentation, .codeGeneration],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.swift, .javascript, .python],
-            sdkFeatures: [.codeExamples],
-            documentationRequirements: [.apiReference, .tutorials, .gettingStarted],
-            testingRequirements: [],
-            performanceBenchmarks: [.docCompleteness]
-        )
+        relevantDocs: []
     )
     let docAgent = LocalAgent(
         id: docContext.agentID,
@@ -69,15 +65,10 @@ func registerProductionAgents() {
     // JavaScript Agent
     let jsContext = AgentContext(
         agentID: UUID(),
+        agentType: .sdk,
+        capabilities: [.codeGeneration, .testing],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.javascript],
-            sdkFeatures: [.authentication, .errorHandling, .asyncSupport],
-            documentationRequirements: [.apiReference],
-            testingRequirements: [.unit, .e2e],
-            performanceBenchmarks: [.latency, .correctness]
-        )
+        relevantDocs: []
     )
     let jsAgent = LocalAgent(
         id: jsContext.agentID,
@@ -91,15 +82,10 @@ func registerProductionAgents() {
     // Python Agent
     let pythonContext = AgentContext(
         agentID: UUID(),
+        agentType: .sdk,
+        capabilities: [.codeGeneration, .testing],
         currentTask: nil,
-        relevantDocs: [],
-        requirements: ProjectRequirements(
-            targetLanguages: [.python],
-            sdkFeatures: [.authentication, .errorHandling, .asyncSupport],
-            documentationRequirements: [.apiReference],
-            testingRequirements: [.unit, .integration],
-            performanceBenchmarks: [.latency, .correctness]
-        )
+        relevantDocs: []
     )
     let pythonAgent = LocalAgent(
         id: pythonContext.agentID,

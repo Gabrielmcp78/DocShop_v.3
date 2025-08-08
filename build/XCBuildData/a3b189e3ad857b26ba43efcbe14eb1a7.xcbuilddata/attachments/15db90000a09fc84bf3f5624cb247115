@@ -1,0 +1,36 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrumentation-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/Sources/Instrumentation/Instrument.swift" : {
+    "index-unit-output-path" : "/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrument.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrument.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Instrument.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/Sources/Instrumentation/InstrumentationSystem.swift" : {
+    "index-unit-output-path" : "/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/InstrumentationSystem.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/InstrumentationSystem.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/InstrumentationSystem.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/Sources/Instrumentation/Locks.swift" : {
+    "index-unit-output-path" : "/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Locks.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Locks.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/Locks.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/Sources/Instrumentation/MultiplexInstrument.swift" : {
+    "index-unit-output-path" : "/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/MultiplexInstrument.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/MultiplexInstrument.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/MultiplexInstrument.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/Sources/Instrumentation/NoOpInstrument.swift" : {
+    "index-unit-output-path" : "/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/NoOpInstrument.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/NoOpInstrument.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-distributed-tracing/build/swift-distributed-tracing.build/Release/Instrumentation.build/Objects-normal/x86_64/NoOpInstrument.o"
+  }
+}
