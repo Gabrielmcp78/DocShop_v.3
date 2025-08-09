@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,29 +28,24 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		431F69AD2E447D0200678C5B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4320058F2E44056D0065B81B /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
-			dstSubfolderSpec = 16;
+			dstSubfolder = Product;
 			files = (
 			);
 			name = "Embed ExtensionKit Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43F6CB7E2E24A50C00B4E0C5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstSubfolder = None;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -80,6 +75,7 @@
 				Models/Tests/AgentContextTypesTests.swift,
 				Models/Tests/DocumentModelTests.swift,
 				Models/Tests/ProjectRelationshipTests.swift,
+				Views/Search/SmartDocumentProcessor.swift,
 			);
 			target = 4345A80E2E0FF5FA002D6A3F /* DocShop */;
 		};
@@ -102,11 +98,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		431F69A02E447D0200678C5B /* DocShopShareExtention */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DocShopShareExtention;
-			sourceTree = "<group>";
-		};
 		432005862E44056D0065B81B /* DocShopIntent */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DocShopIntent;
@@ -131,7 +122,6 @@
 /* Begin PBXFrameworksBuildPhase section */
 		4345A80C2E0FF5FA002D6A3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				43F6CB652E24948F00B4E0C5 /* HummingbirdRouter in Frameworks */,
 				43F6CB5F2E24948F00B4E0C5 /* Hummingbird in Frameworks */,
@@ -143,11 +133,9 @@
 				43F6CB672E24948F00B4E0C5 /* HummingbirdTLS in Frameworks */,
 				434FB8EB2E22D75900AA4B57 /* FoundationModels.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43F6CB7D2E24A50C00B4E0C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				43F6CBA92E24FA6800B4E0C5 /* HummingbirdHTTP2 in Frameworks */,
 				43F6CBAB2E24FA6C00B4E0C5 /* HummingbirdCore in Frameworks */,
@@ -155,7 +143,6 @@
 				43F6CB8D2E24A6F600B4E0C5 /* Hummingbird in Frameworks */,
 				43F6CBAF2E24FA7300B4E0C5 /* HummingbirdTLS in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -165,7 +152,6 @@
 			children = (
 				43F6CB812E24A50C00B4E0C5 /* DocShopAPI */,
 				432005862E44056D0065B81B /* DocShopIntent */,
-				431F69A02E447D0200678C5B /* DocShopShareExtention */,
 				4345A8102E0FF5FA002D6A3F /* Products */,
 				4345A8112E0FF5FA002D6A3F /* DocShop */,
 				434FB8E92E22D75900AA4B57 /* Frameworks */,
@@ -208,8 +194,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			fileSystemSynchronizedGroups = (
 				4345A8112E0FF5FA002D6A3F /* DocShop */,
 			);
@@ -236,8 +220,6 @@
 				43F6CB7E2E24A50C00B4E0C5 /* CopyFiles */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
 				43F6CB812E24A50C00B4E0C5 /* DocShopAPI */,
@@ -287,7 +269,7 @@
 				439363CF2E23DC4300A8CD47 /* XCRemoteSwiftPackageReference "VisualEffects" */,
 				43F6CB5D2E24948F00B4E0C5 /* XCRemoteSwiftPackageReference "hummingbird" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 4345A8102E0FF5FA002D6A3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,34 +283,28 @@
 /* Begin PBXResourcesBuildPhase section */
 		4345A80D2E0FF5FA002D6A3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				43A00DDF2E438E9D00399552 /* Info.plist in Resources */,
 				434A63F22E4390990060BB96 /* Info 2.plist in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4345A80B2E0FF5FA002D6A3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43F6CB7C2E24A50C00B4E0C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4345A81A2E0FF60D002D6A3F /* Debug */ = {
+		4345A81A2E0FF60D002D6A3F /* Debug configuration for PBXProject "DocShop" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -391,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		4345A81B2E0FF60D002D6A3F /* Release */ = {
+		4345A81B2E0FF60D002D6A3F /* Release configuration for PBXProject "DocShop" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -446,7 +422,7 @@
 			};
 			name = Release;
 		};
-		4345A81D2E0FF60D002D6A3F /* Debug */ = {
+		4345A81D2E0FF60D002D6A3F /* Debug configuration for PBXNativeTarget "DocShop" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -485,7 +461,7 @@
 			};
 			name = Debug;
 		};
-		4345A81E2E0FF60D002D6A3F /* Release */ = {
+		4345A81E2E0FF60D002D6A3F /* Release configuration for PBXNativeTarget "DocShop" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -524,7 +500,7 @@
 			};
 			name = Release;
 		};
-		43F6CB852E24A50C00B4E0C5 /* Debug */ = {
+		43F6CB852E24A50C00B4E0C5 /* Debug configuration for PBXNativeTarget "DocShopAPI" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -538,7 +514,7 @@
 			};
 			name = Debug;
 		};
-		43F6CB862E24A50C00B4E0C5 /* Release */ = {
+		43F6CB862E24A50C00B4E0C5 /* Release configuration for PBXNativeTarget "DocShopAPI" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -558,28 +534,25 @@
 		4345A80A2E0FF5FA002D6A3F /* Build configuration list for PBXProject "DocShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4345A81A2E0FF60D002D6A3F /* Debug */,
-				4345A81B2E0FF60D002D6A3F /* Release */,
+				4345A81A2E0FF60D002D6A3F /* Debug configuration for PBXProject "DocShop" */,
+				4345A81B2E0FF60D002D6A3F /* Release configuration for PBXProject "DocShop" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4345A81C2E0FF60D002D6A3F /* Build configuration list for PBXNativeTarget "DocShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4345A81D2E0FF60D002D6A3F /* Debug */,
-				4345A81E2E0FF60D002D6A3F /* Release */,
+				4345A81D2E0FF60D002D6A3F /* Debug configuration for PBXNativeTarget "DocShop" */,
+				4345A81E2E0FF60D002D6A3F /* Release configuration for PBXNativeTarget "DocShop" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		43F6CB842E24A50C00B4E0C5 /* Build configuration list for PBXNativeTarget "DocShopAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43F6CB852E24A50C00B4E0C5 /* Debug */,
-				43F6CB862E24A50C00B4E0C5 /* Release */,
+				43F6CB852E24A50C00B4E0C5 /* Debug configuration for PBXNativeTarget "DocShopAPI" */,
+				43F6CB862E24A50C00B4E0C5 /* Release configuration for PBXNativeTarget "DocShopAPI" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */

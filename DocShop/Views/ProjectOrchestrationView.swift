@@ -19,7 +19,7 @@ struct ProjectOrchestrationView: View {
             if let project = selectedProject {
                 ProjectDetailView(project: project)
             } else if showingProjectCreation {
-                ImprovedProjectCreationView(isPresented: $showingProjectCreation)
+                BMadNativeProjectCreationView(isPresented: $showingProjectCreation)
             } else {
                 Text("Select or create a project to begin.")
                     .font(.title2)

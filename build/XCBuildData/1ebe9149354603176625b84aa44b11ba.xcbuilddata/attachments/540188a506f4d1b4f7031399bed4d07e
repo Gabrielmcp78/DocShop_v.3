@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/Sources/Collections/Collections.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-64add7a1511e955a7fa080af0ed776b6.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-64add7a1511e955a7fa080af0ed776b6.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-collections/build/swift-collections.build/Release/Collections.build/Objects-normal/x86_64/Collections-64add7a1511e955a7fa080af0ed776b6.o"
+  }
+}

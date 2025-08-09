@@ -1,0 +1,9 @@
+System,Component,Protocol,Endpoint/Host,Path,Port,Auth,Notes
+Core,EnhancedGeminiAPI,HTTPS,generativelanguage.googleapis.com,/v1beta/models/gemini-1.5-flash:generateContent,443,API Key (Gemini),Used for content generation
+Core,Neo4jManager,Bolt/TCP,<your-neo4j-host>,n/a,7687,Basic/Auth Token,Full-text search on chunks (configure)
+Core,SDKGenerator,File,file://,n/a,n/a,n/a,Reads local project document files
+Core,ShellAPI,Process,n/a,n/a,n/a,n/a,Executes local shell commands (stdout/stderr captured)
+UI,DocumentDetailView,File,file://,n/a,n/a,n/a,Loads document content from filesystem
+UI,LibraryView,File,file://,n/a,n/a,n/a,Reads local files for previews and clipboard ops
+Integration,BMadAgentManager,File,file://.bmad-core/agents,n/a,n/a,n/a,Reads agent markdown definitions from repo
+Logging,DocumentLogger,File,file://DocShop/Logs,n/a,n/a,n/a,Appends log entries to local log file

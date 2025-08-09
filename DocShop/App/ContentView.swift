@@ -55,6 +55,8 @@ struct ContentView: View {
       SystemStatusView()
     case .projects:
       ProjectOrchestrationView()
+    case .bmad:
+      DocShopBMadDashboardView()
     case .none:
       EmptyStateView()
     }
@@ -65,6 +67,7 @@ enum SidebarItem: String, CaseIterable, Hashable {
   case library = "library"
   case importItem = "import"
   case projects = "projects"
+  case bmad = "bmad"
   case status = "status"
   case logs = "logs"
   case settings = "settings"
@@ -77,6 +80,8 @@ enum SidebarItem: String, CaseIterable, Hashable {
       return "Import"
     case .projects:
       return "Projects"
+    case .bmad:
+      return "BMad"
     case .status:
       return "System Status"
     case .logs:
@@ -94,6 +99,8 @@ enum SidebarItem: String, CaseIterable, Hashable {
       return "square.and.arrow.down"
     case .projects:
       return "folder.badge.gearshape"
+    case .bmad:
+      return "brain.head.profile"
     case .status:
       return "info.circle"
     case .logs:
@@ -115,8 +122,9 @@ struct EnhancedSidebarView: View {
         sidebarRow(for: .library)
         sidebarRow(for: .importItem)
       }
-      Section(header: Text("Projects")) {
+      Section(header: Text("Development")) {
         sidebarRow(for: .projects)
+        sidebarRow(for: .bmad)
       }
       Section(header: Text("System")) {
         sidebarRow(for: .status)

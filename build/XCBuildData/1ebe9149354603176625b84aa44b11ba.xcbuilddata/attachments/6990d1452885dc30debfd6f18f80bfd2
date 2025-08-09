@@ -1,0 +1,4 @@
+module NIOHTTPTypesHTTP1 {
+header "NIOHTTPTypesHTTP1-Swift.h"
+export *
+}

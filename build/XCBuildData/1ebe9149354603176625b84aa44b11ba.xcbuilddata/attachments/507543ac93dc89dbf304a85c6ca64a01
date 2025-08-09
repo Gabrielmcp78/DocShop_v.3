@@ -1,0 +1,21 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/CoreMetrics-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/Sources/CoreMetrics/Locks.swift" : {
+    "index-unit-output-path" : "/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Locks.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Locks.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Locks.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/Sources/CoreMetrics/Metrics.swift" : {
+    "index-unit-output-path" : "/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Metrics.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Metrics.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-metrics/build/swift-metrics.build/Release/CoreMetrics.build/Objects-normal/arm64/Metrics.o"
+  }
+}

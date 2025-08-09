@@ -1,0 +1,4 @@
+module HummingbirdRouter {
+header "HummingbirdRouter-Swift.h"
+export *
+}

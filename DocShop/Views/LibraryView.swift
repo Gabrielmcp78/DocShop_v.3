@@ -1,4 +1,7 @@
 import SwiftUI
+#if os(macOS)
+import AppKit
+#endif
 
 struct LibraryView: View {
     @ObservedObject private var library = DocLibraryIndex.shared

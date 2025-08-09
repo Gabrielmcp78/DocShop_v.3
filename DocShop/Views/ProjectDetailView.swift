@@ -4,7 +4,7 @@ struct ProjectDetailView: View {
     let project: Project
     
     var body: some View {
-        ProjectCommandDashboardView(project: project)
+        EnhancedProjectDetailView(project: project)
     }
 }
 

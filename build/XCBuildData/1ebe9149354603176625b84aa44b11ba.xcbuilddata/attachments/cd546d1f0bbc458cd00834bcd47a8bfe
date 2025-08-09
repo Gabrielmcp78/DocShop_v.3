@@ -1,0 +1,4 @@
+module VisualEffects {
+header "VisualEffects-Swift.h"
+export *
+}

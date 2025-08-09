@@ -1,0 +1,66 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/HummingbirdRouter-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/ContextTransform.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/ContextTransform.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/ContextTransform.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/ContextTransform.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/Deprecations.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Deprecations.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Deprecations.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Deprecations.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/Route.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Route.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Route.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/Route.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouteBuilder.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteBuilder.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteBuilder.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteBuilder.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouteGroup.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteGroup.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteGroup.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteGroup.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouteHandler.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteHandler.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteHandler.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouteHandler.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouterBuilder.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilder.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilder.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilder.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouterBuilderContext.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderContext.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderContext.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderContext.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouterBuilderState.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderState.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderState.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterBuilderState.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouterController.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterController.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterController.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterController.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdRouter/RouterPath.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterPath.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterPath.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdRouter.build/Objects-normal/x86_64/RouterPath.o"
+  }
+}

@@ -183,7 +183,7 @@ struct TaskContext: Codable, Hashable {
 }
 
 enum SDKFeature: String, Codable, Hashable, CaseIterable, Identifiable {
-    case authentication, errorHandling, logging, asyncSupport, customEndpoints, codeExamples
+    case authentication, errorHandling, logging, asyncSupport, customEndpoints, codeExamples, apiGeneration
     
     var id: Self { self }
 }
@@ -431,3 +431,4 @@ extension Project {
         }
     }
 }
+

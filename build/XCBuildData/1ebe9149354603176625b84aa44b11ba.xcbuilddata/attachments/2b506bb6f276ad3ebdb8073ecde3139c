@@ -1,0 +1,4 @@
+module Hummingbird {
+header "Hummingbird-Swift.h"
+export *
+}

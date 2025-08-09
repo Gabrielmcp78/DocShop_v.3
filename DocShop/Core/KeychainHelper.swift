@@ -17,6 +17,14 @@ class KeychainHelper {
         SecItemAdd(query as CFDictionary, nil)
     }
     
+    func getAPIKey(for service: String) -> String? {
+        return loadAPIKey(service: "\(service)APIKey")
+    }
+    
+    func setAPIKey(_ key: String, for service: String) {
+        saveAPIKey(key, service: "\(service)APIKey")
+    }
+    
     func loadAPIKey(service: String = "GeminiAPIKey", account: String = "default") -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,

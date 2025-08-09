@@ -1,0 +1,51 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HummingbirdHTTP2-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/Exports.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/Exports.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/Exports.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/Exports.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTP2Channel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2Channel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2Channel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2Channel.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTP2ServerConnectionManager+StateMachine.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager+StateMachine.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager+StateMachine.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager+StateMachine.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTP2ServerConnectionManager.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2ServerConnectionManager.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTP2StreamChannel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2StreamChannel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2StreamChannel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2StreamChannel.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2UpgradeChannel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2UpgradeChannel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTP2UpgradeChannel.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/HTTPServerBuilder+http2.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTPServerBuilder+http2.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTPServerBuilder+http2.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/HTTPServerBuilder+http2.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdHTTP2/TLSChannelConfiguration.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/TLSChannelConfiguration.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/TLSChannelConfiguration.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdHTTP2.build/Objects-normal/arm64/TLSChannelConfiguration.o"
+  }
+}

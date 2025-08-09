@@ -1,0 +1,51 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceLifecycle-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/AsyncCancelOnGracefulShutdownSequence.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncCancelOnGracefulShutdownSequence.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncCancelOnGracefulShutdownSequence.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncCancelOnGracefulShutdownSequence.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/AsyncGracefulShutdownSequence.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncGracefulShutdownSequence.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncGracefulShutdownSequence.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/AsyncGracefulShutdownSequence.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/CancellationWaiter.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/CancellationWaiter.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/CancellationWaiter.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/CancellationWaiter.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/GracefulShutdown.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/GracefulShutdown.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/GracefulShutdown.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/GracefulShutdown.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/Service.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/Service.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/Service.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/Service.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/ServiceGroup.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroup.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroup.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroup.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/ServiceGroupConfiguration.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroupConfiguration.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroupConfiguration.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceGroupConfiguration.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/Sources/ServiceLifecycle/ServiceRunnerError.swift" : {
+    "index-unit-output-path" : "/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceRunnerError.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceRunnerError.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/swift-service-lifecycle/build/swift-service-lifecycle.build/Release/ServiceLifecycle.build/Objects-normal/x86_64/ServiceRunnerError.o"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HummingbirdTLS-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdTLS/Exports.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/Exports.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/Exports.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/Exports.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdTLS/HTTPServerBuilder+tls.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HTTPServerBuilder+tls.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HTTPServerBuilder+tls.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/HTTPServerBuilder+tls.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdTLS/TLSChannel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/TLSChannel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/TLSChannel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdTLS.build/Objects-normal/x86_64/TLSChannel.o"
+  }
+}

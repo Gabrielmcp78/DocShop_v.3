@@ -1,0 +1,146 @@
+{
+  "" : {
+    "const-values" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary.d",
+    "diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary.dia",
+    "emit-module-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary-emit-module.dia",
+    "pch" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HummingbirdCore-primary.swiftdeps"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Deprecations.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Deprecations.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Deprecations.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Deprecations.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Request/Request.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Request.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Request.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Request.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Request/RequestBody+inboundClose.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody+inboundClose.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody+inboundClose.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody+inboundClose.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Request/RequestBody.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBody.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Request/RequestBodyMergedWithUnderlyingRequestPartIterator.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBodyMergedWithUnderlyingRequestPartIterator.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBodyMergedWithUnderlyingRequestPartIterator.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/RequestBodyMergedWithUnderlyingRequestPartIterator.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Request/URI.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/URI.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/URI.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/URI.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Response/Response.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Response.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Response.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Response.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Response/ResponseBody.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBody.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBody.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBody.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Response/ResponseBodyWriter.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBodyWriter.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBodyWriter.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseBodyWriter.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Response/ResponseWriter.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseWriter.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseWriter.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ResponseWriter.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/AvailableConnectionsHandler.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AvailableConnectionsHandler.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AvailableConnectionsHandler.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AvailableConnectionsHandler.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/BindAddress.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/BindAddress.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/BindAddress.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/BindAddress.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTP1Channel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTP1Channel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTP1Channel.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/HTTP/HTTPChannelHandler.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPChannelHandler.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPChannelHandler.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPChannelHandler.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPServerBuilder.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPServerBuilder.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPServerBuilder.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/HTTPUserEventHandler.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPUserEventHandler.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPUserEventHandler.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HTTPUserEventHandler.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/Server.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Server.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Server.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/Server.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/ServerChildChannel.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerChildChannel.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerChildChannel.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerChildChannel.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/ServerConfiguration.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerConfiguration.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerConfiguration.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/ServerConfiguration.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Server/TSTLSOptions.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/TSTLSOptions.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/TSTLSOptions.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/TSTLSOptions.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/AnyAsyncSequence.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AnyAsyncSequence.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AnyAsyncSequence.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/AnyAsyncSequence.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/FlatDictionary.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/FlatDictionary.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/FlatDictionary.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/FlatDictionary.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/HBParser.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HBParser.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HBParser.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/HBParser.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/OutputBuffer.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/OutputBuffer.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/OutputBuffer.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/OutputBuffer.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/SendableMetatype.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/SendableMetatype.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/SendableMetatype.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/SendableMetatype.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/String+percentEncode.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/String+percentEncode.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/String+percentEncode.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/String+percentEncode.o"
+  },
+  "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/Sources/HummingbirdCore/Utils/UnsafeTransfer.swift" : {
+    "index-unit-output-path" : "/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/UnsafeTransfer.o",
+    "llvm-bc" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/UnsafeTransfer.bc",
+    "object" : "/Users/gabrielmcp/Library/Developer/Xcode/DerivedData/DocShop-apssclrzcniqpidkwyomdpvhnvql/SourcePackages/checkouts/hummingbird/build/hummingbird.build/Release/HummingbirdCore.build/Objects-normal/x86_64/UnsafeTransfer.o"
+  }
+}

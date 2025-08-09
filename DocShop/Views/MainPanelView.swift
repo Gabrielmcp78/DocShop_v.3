@@ -22,6 +22,10 @@ struct MainPanelView: View {
             Text("Select a tool to begin.")
                 .font(.title2)
                 .foregroundStyle(.secondary)
+        case .some(.bmad):
+            Text("BMAD view coming soon")
+                .font(.title2)
+                .foregroundStyle(.tertiary)
         }
     }
 
